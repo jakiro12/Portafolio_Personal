@@ -21,7 +21,7 @@ export default function Init(){
                 </div>
                 </header>
                 <ImageWeb  />
-                <button className='btn-proyects'onClick={()=>navigate('/p')}>Proyectos</button>
+                <button className='btn-proyects'onClick={()=>navigate('/projects')}>Proyectos</button>
             </Direction>
            </div>
            <div className='my-info'>
