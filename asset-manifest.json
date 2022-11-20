@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portafolio_personal/static/css/main.40b21f30.css",
+    "main.js": "/portafolio_personal/static/js/main.45e869db.js",
+    "static/media/profile.jpg": "/portafolio_personal/static/media/profile.99c6014c021e6c87667c.jpg",
+    "static/media/app.jpg": "/portafolio_personal/static/media/app.9d622fbfcbd5755726e7.jpg",
+    "static/media/disney.jpg": "/portafolio_personal/static/media/disney.f56cdddd53143539b03e.jpg",
+    "static/media/cartags.jpg": "/portafolio_personal/static/media/cartags.7166fe17e8ee040739e3.jpg",
+    "static/media/calculadora.jpg": "/portafolio_personal/static/media/calculadora.77bcc82da2d0e0cb3103.jpg",
+    "index.html": "/portafolio_personal/index.html",
+    "main.40b21f30.css.map": "/portafolio_personal/static/css/main.40b21f30.css.map",
+    "main.45e869db.js.map": "/portafolio_personal/static/js/main.45e869db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40b21f30.css",
+    "static/js/main.45e869db.js"
+  ]
+}
