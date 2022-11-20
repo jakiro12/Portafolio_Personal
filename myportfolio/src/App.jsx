@@ -1,5 +1,5 @@
 import Init from './components/LandingPage'
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import {HashRouter as Router,Route,Routes} from 'react-router-dom'
 import Deploys from './components/DeployActives'
 
 function App() {
@@ -9,12 +9,12 @@ function App() {
 //.color4 {color: #bde552;}
 //.color5 {color: #f2e981;}
   return (
-    <BrowserRouter>    
+    <Router>    
     <Routes>
       <Route path="/" element={<Init/>} />
       <Route path="/proyects" element={<Deploys/>} />
         </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 
