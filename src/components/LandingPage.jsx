@@ -44,7 +44,7 @@ const borderAnimate=keyframes`
     }
 `
 const Container=styled.div`
-    height: 200vh;
+    height: 100vh;
     font-size: medium;
     color: white;
     width: 100%;
@@ -54,6 +54,7 @@ const Container=styled.div`
     background:#15518e;
    @media screen and (max-width:847px){
         display: grid;
+        height: 100vh;
    }
  
     .btn-photo{
