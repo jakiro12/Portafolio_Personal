@@ -21,7 +21,7 @@ export default function Init(){
                 </div>
                 </header>
                 <ImageWeb  />
-                <button className='btn-proyects'onClick={()=>navigate('/projects')}>Proyectos</button>
+                <button className='btn-proyects'onClick={()=>navigate('/proyects')}>Proyectos</button>
             </Direction>
            </div>
            <div className='my-info'>
@@ -54,7 +54,7 @@ const Container=styled.div`
     background:#15518e;
    @media screen and (max-width:847px){
         display: grid;
-        height: 100vh;
+        height: 200vh;
    }
  
     .btn-photo{
