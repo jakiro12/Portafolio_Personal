@@ -79,6 +79,7 @@ const Container=styled.div`
         @media screen and (max-width:847px){
         width: min(400px,70%);
         margin-inline: auto;
+        overflow-y: scroll;
         }
     }
     .about{
