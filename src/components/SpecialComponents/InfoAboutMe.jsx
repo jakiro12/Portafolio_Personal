@@ -16,9 +16,10 @@ export default function TextAbout(){
     )
 }
 const Container=styled.div`
-    width: 100%;
+    width: min(90%,400px);
     height: 200px;
     display: grid;
+    margin-inline: auto;
     font-size: medium;
     font-weight: 300;
     transition: all 3s;
@@ -27,7 +28,7 @@ const Container=styled.div`
     @media screen and (max-width:847px) {
         width: min(400px,90%);
         margin-inline: auto;
-        overflow-y: scroll;
+        overflow: hidden;
     }
     &:hover{
         transform:  scale(1.05);

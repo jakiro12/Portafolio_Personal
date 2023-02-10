@@ -14,6 +14,7 @@ export default function ImageWeb(){
 const Image=styled.div`
         position: relative;      
         width: 200px;
+        margin-inline:auto;
         height: 200px;  
         span{
             background: url(${background});

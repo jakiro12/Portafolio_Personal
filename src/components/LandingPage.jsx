@@ -11,15 +11,12 @@ export default function Init(){
            <div className='btn-photo'>
             <Direction  time={ver} onMouseOver={()=>setVer('visible')} onMouseOut={()=>setVer('hidden')}>
                 <header >
-                    <p id='hola'>Aquí!</p>
-                <div className='btn-container'>
-                <span className='arrow'> </span>
-                <span className='arrow'></span>
-                <span className='arrow'></span>
-                <span className='arrow'></span>
-                <span className='arrow'></span>
-                </div>
+                hola por aqui   
                 </header>
+                <main>
+                    hola
+                </main>
+              
                 <ImageWeb  />
                 <button className='btn-proyects'onClick={()=>navigate('/proyects')}>Proyectos</button>
             </Direction>
@@ -35,14 +32,6 @@ export default function Init(){
         </Container>
     )
 }
-const borderAnimate=keyframes`
-    0%{
-        transform: translateY(-70px) rotate(45deg);
-    }
-    100%{
-        transform: translateY(5px) rotate(45deg);
-    }
-`
 const Container=styled.div`
     height: 100vh;
     font-size: medium;
@@ -60,10 +49,22 @@ const Container=styled.div`
     .btn-photo{
         display: flex;
         justify-content: center;
-        width:  600px;
+        width:  45%;
         height: 520px;
         margin: 5%; 
         border: 2px solid #96c2ee15;
+        transition: all 1.5s;
+        &:hover{
+            transition: all 1.5s;
+            transform: scale(1.05);
+            box-shadow: 2px 2px 2px black,
+            4px 4px 2px black,
+            6px 6px 2px black,
+            8px 8px 2px black,
+            10px 10px 2px black,
+            12px 12px 2px black,
+            14px 14px 2px black;
+        }
         @media screen and (max-width:847px){
             width: min(400px,50%) ;
             height: 480px;
@@ -73,13 +74,13 @@ const Container=styled.div`
     .my-info{
         display: grid;
         justify-content: center;
-        width:  600px;
+        width:  45%;
         height: 420px;
-        margin: 5%; 
+        margin: auto; 
         @media screen and (max-width:847px){
         width: min(400px,70%);
         margin-inline: auto;
-        overflow-y: scroll;
+        overflow:hidden;
         }
     }
     .about{
@@ -118,6 +119,8 @@ const Direction=styled.article`
     display: grid;
     justify-content: center;
     position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 40% 50%;
     .btn-proyects{
         position: absolute;
         top: 72%;
@@ -133,41 +136,17 @@ const Direction=styled.article`
         
     }
     header{
-        width: 200px;
-        height: 200px;        
+        width: auto;
+        height: 100%;        
         overflow: hidden;
-        margin-top: 15%;
         text-align: center;
-        p{
-            font-weight: bold;
-           margin-top: 4%;
+     
+        
         }
-        .btn-container{
-            overflow-y:hidden ;
-            display: grid;
-            width: 100px;
-            height: 160px;
-            margin: auto ;
-            position: relative;
-            margin-top: 10%;
-        span{
-            width: 80px;
-            height: 25px;
-            border: 2px solid transparent;
-            margin: auto;
-            text-align: center;
-        }
-                    
-            .arrow {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #50bc34;
-            border-left: 0;
-            border-radius: 0 15px 0 15px;
-            border-top: 0;
-           animation: ${borderAnimate} 2s linear infinite;
-            }
-        }
+    main {
+        width: auto;
+        height: 100%;
+        text-align: center;
     }
     
    
