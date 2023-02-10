@@ -3,18 +3,29 @@ import ImageWeb from './SpecialComponents/FirstImage';
 import TextAbout from './SpecialComponents/InfoAboutMe';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useEffect } from 'react';
 export default function Init(){
     const[ver,setVer]=useState('hidden')
     const navigate=useNavigate()
+    useEffect(()=>{
+        const getTitleName=document.querySelector('.my-name')
+        let shadow=''
+         for (let index = 0; index < 10; index++) {
+           shadow += (shadow ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #d9d9d9'
+            
+        } 
+        getTitleName.style.textShadow=shadow;
+
+    })
     return(
         <Container>            
            <div className='btn-photo'>
             <Direction  time={ver} onMouseOver={()=>setVer('visible')} onMouseOut={()=>setVer('hidden')}>
                 <header >
-                hola por aqui   
+                   <h3 className='my-name' data-name='Lautaro Carreño'>Lautaro Carreño</h3>
                 </header>
                 <main>
-                    hola
+                    <div className='arrow'></div>
                 </main>
               
                 <ImageWeb  />
@@ -114,17 +125,18 @@ const Container=styled.div`
 `
 const Direction=styled.article`
     height: 90%;
-    width: 300px;
+    width: 70%;
+    outline: 2px solid black;
     margin: auto;
     display: grid;
     justify-content: center;
     position: relative;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 40% 50%;
+    grid-template-rows: 20% 30% 50%;
     .btn-proyects{
         position: absolute;
         top: 72%;
-        left: 35%;
+        left: 38%;
         visibility: ${(props)=>props.time};
         background: #50bc34;
         border: none;
@@ -137,8 +149,8 @@ const Direction=styled.article`
     }
     header{
         width: auto;
-        height: 100%;        
-        overflow: hidden;
+        height: 50%;        
+        margin-top: auto;
         text-align: center;
      
         
@@ -146,9 +158,25 @@ const Direction=styled.article`
     main {
         width: auto;
         height: 100%;
-        text-align: center;
+        display: grid;
+        place-items: center;
+    }
+    h3{
+        letter-spacing: 2px;
+        font-size: xx-large;
+        transform: rotate(-15deg) skew(25deg);
+        position: relative;
+        &::after{
+            content: attr(data-name);
+            position: absolute;
+            top: 12px;
+            left:25px;
+            color: rgba(0,0,0);
+            text-shadow: none;
+            filter: blur(2px);
+            z-index: -1;
+        }
     }
     
-   
     
 `

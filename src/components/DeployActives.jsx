@@ -2,6 +2,7 @@ import styled,{keyframes} from "styled-components"
 export default function Deploys(){
     return(
         <Container>
+            <p className="user-number">contador de visitas</p>
             <AnimationDeploys>
             <div className="carrusel">
             <div className="item1"><a href="https://cartags.netlify.app/" target='_blank' rel="noopener noreferrer">
@@ -59,15 +60,22 @@ const rotate=keyframes`
 const Container=styled.body`
     
     min-height: 100vh;
-    width: 100%;
+    width: auto;
     background: #15518e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr;
+    .user-number{
+        width: 40%;
+        height: 100%;
+        outline: 2px solid red;
+        margin-inline: auto;
+        display: grid;
+        place-items: center;
+        }
 `
 const AnimationDeploys=styled.div`
+        margin: auto;
         position: relative;
         height: 200px ;
         width: 350px;
@@ -75,7 +83,7 @@ const AnimationDeploys=styled.div`
         a{
             text-decoration: none;
         }
-   
+ 
     .carrusel{
         position: absolute;
         height: 100%;
