@@ -1,4 +1,4 @@
-import styled,{keyframes} from 'styled-components';
+import styled from 'styled-components';
 import ImageWeb from './SpecialComponents/FirstImage';
 import TextAbout from './SpecialComponents/InfoAboutMe';
 import { useNavigate } from 'react-router-dom';
