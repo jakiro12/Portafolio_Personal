@@ -7,15 +7,15 @@ export default function ImageWeb(){
          <span></span>
          <span></span>
          <span></span>
-
         </Image>
     )
 }
 const Image=styled.div`
         position: relative;      
         width: 200px;
-        margin-inline:auto;
+        margin:auto;
         height: 200px;  
+        perspective: 600px;
         span{
             background: url(${background});
             inset: 0;
@@ -41,22 +41,22 @@ const Image=styled.div`
             clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
         }
         &:hover span:nth-child(1){
-            transform: translateX(40px) translateY(-70px) scale(0.8) rotate(45deg)  ;
+            transform: translateX(40px) translateY(-70px) scale(0.8) rotate(45deg) rotateX(80deg) ;
             transition: 1s;
             border-radius: 0 120px 0 0;      
         }
         &:hover span:nth-child(2){
-            transform: translateX(40px) translateY(70px) scale(0.8) rotate(-45deg)  ;
+            transform: translateX(40px) translateY(70px) scale(0.8) rotate(-45deg) rotateX(-80deg)  ;
             transition: 1s;
             border-radius: 0  0 120px 0;      
         }
         &:hover span:nth-child(3){
-            transform: translateX(-40px) translateY(70px) scale(0.8) rotate(45deg)  ;
+            transform: translateX(-40px) translateY(70px) scale(0.8) rotate(45deg) rotateX(-80deg) ;
             transition: 1s;
             border-radius: 0  0  0 120px;      
         }
         &:hover span:nth-child(4){
-            transform: translateX(-40px) translateY(-70px) scale(0.8) rotate(-45deg)  ;
+            transform: translateX(-40px) translateY(-70px) scale(0.8) rotate(-45deg) rotateX(80deg)  ;
             transition: 1s;
             border-radius:120px 0  0  0 ;      
         }

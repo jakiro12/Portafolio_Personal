@@ -35,7 +35,7 @@ export default function Init(){
                 <h3 className='my-job' >Full Stack Dev</h3>
                 </main>
               
-                <ImageWeb  />
+                <ImageWeb/>
                 <button className='btn-proyects'onClick={()=>navigate('/proyects')}>Proyectos</button>
             </Direction>
            </div>
@@ -144,8 +144,9 @@ const Direction=styled.article`
     grid-template-rows: 20% 35% 45%;
     .btn-proyects{
         position: absolute;
-        top: 72%;
-        left: 38%;
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         visibility: ${(props)=>props.time};
         background: #50bc34;
         border: none;

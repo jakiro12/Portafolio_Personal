@@ -4,13 +4,11 @@ export default function TextAbout(){
     const[seeText,setSeeText]=useState(0)
     return(
         <Container behind={seeText} onMouseOver={()=>setSeeText(1)} onMouseOut={()=>setSeeText(0)}>
-              <p>
-                Desarrollador Full-Stack
-            </p>
             <p>
-                Hola soy lautaro, un desarrollador cuya meta es aprender en profundidad el diseño web y el uso de JavaScript.
-                Actualmente tengo 1 año de experiencia y me he puesto como meta desarrollar proyectos complejos con el uso minimo de librerias.
-
+            Desarrollo aplicaciones en React y React-Native, utilizando JavaScript como lenguaje principal.
+             Cuento con más de 1 año de experiencia y tuve la oportunidad de trabajar en grupos de desarrollo 
+             con personas de otros países y diferentes tipos de conocimientos, ya sea en lenguaje de programación
+              como ámbitos laborales.
             </p>
         </Container>
     )
@@ -28,7 +26,7 @@ const Container=styled.div`
     @media screen and (max-width:847px) {
         width: min(400px,90%);
         margin-inline: auto;
-        overflow: hidden;
+        overflow-y: scroll;
     }
     &:hover{
         transform:  scale(1.05);
