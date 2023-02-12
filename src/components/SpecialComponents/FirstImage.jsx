@@ -21,6 +21,7 @@ const Image=styled.div`
             inset: 0;
             background-size: 200px 200px;
             background-repeat: no-repeat;
+            background-position: center center;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -59,4 +60,8 @@ const Image=styled.div`
             transition: 1s;
             border-radius:120px 0  0  0 ;      
         }
+        @media screen and (max-width:847px){
+            width: 150px;
+            height: 150px;
+   }
 `

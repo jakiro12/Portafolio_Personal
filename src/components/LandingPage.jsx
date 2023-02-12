@@ -9,12 +9,19 @@ export default function Init(){
     const navigate=useNavigate()
     useEffect(()=>{
         const getTitleName=document.querySelector('.my-name')
+        const getTitleDev=document.querySelector('.my-job')
         let shadow=''
          for (let index = 0; index < 10; index++) {
-           shadow += (shadow ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #d9d9d9'
+           shadow += (shadow ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #a5a5a5'
             
         } 
         getTitleName.style.textShadow=shadow;
+        let shadow2=''
+         for (let index = 0; index < 10; index++) {
+           shadow2 += (shadow2 ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #a5a5a5'
+            
+        } 
+        getTitleDev.style.textShadow=shadow2;
 
     })
     return(
@@ -22,10 +29,10 @@ export default function Init(){
            <div className='btn-photo'>
             <Direction  time={ver} onMouseOver={()=>setVer('visible')} onMouseOut={()=>setVer('hidden')}>
                 <header >
-                   <h3 className='my-name' data-name='Lautaro Carreño'>Lautaro Carreño</h3>
+                   <h3 className='my-name'>Lautaro Carreño</h3>
                 </header>
                 <main>
-                    <div className='arrow'></div>
+                <h3 className='my-job' >Full Stack Dev</h3>
                 </main>
               
                 <ImageWeb  />
@@ -55,14 +62,16 @@ const Container=styled.div`
    @media screen and (max-width:847px){
         display: grid;
         height: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
    }
  
     .btn-photo{
         display: flex;
         justify-content: center;
         width:  45%;
+        margin: auto;
         height: 520px;
-        margin: 5%; 
         border: 2px solid #96c2ee15;
         transition: all 1.5s;
         &:hover{
@@ -77,9 +86,9 @@ const Container=styled.div`
             14px 14px 2px black;
         }
         @media screen and (max-width:847px){
-            width: min(400px,50%) ;
-            height: 480px;
-            margin-inline: auto;
+            width: min(400px,70%) ;
+            height: 70%;
+            margin: auto;
    }
        }
     .my-info{
@@ -132,7 +141,7 @@ const Direction=styled.article`
     justify-content: center;
     position: relative;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 30% 50%;
+    grid-template-rows: 20% 35% 45%;
     .btn-proyects{
         position: absolute;
         top: 72%;
@@ -163,19 +172,10 @@ const Direction=styled.article`
     }
     h3{
         letter-spacing: 2px;
-        font-size: xx-large;
+        font-size: x-large;
         transform: rotate(-15deg) skew(25deg);
         position: relative;
-        &::after{
-            content: attr(data-name);
-            position: absolute;
-            top: 12px;
-            left:25px;
-            color: rgba(0,0,0);
-            text-shadow: none;
-            filter: blur(2px);
-            z-index: -1;
-        }
+      
     }
     
     
