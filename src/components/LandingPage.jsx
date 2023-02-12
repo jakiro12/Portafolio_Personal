@@ -86,7 +86,7 @@ const Container=styled.div`
             14px 14px 2px black;
         }
         @media screen and (max-width:847px){
-            width: min(400px,70%) ;
+            width: min(450px,80%) ;
             height: 70%;
             margin: auto;
    }
@@ -149,8 +149,9 @@ const Direction=styled.article`
         transform: translate(-50%, -50%);
         visibility: ${(props)=>props.time};
         background: #50bc34;
+        border-radius:  25% 25% 25% 25%/ 100% 100% 100% 100%;
         border: none;
-        padding:3px ;
+        padding:2% ;
         color: white;
         &:hover{
             cursor: pointer;

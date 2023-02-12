@@ -1,7 +1,14 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 export default function TextAbout(){
     const[seeText,setSeeText]=useState(0)
+    useEffect(()=>{
+        setTimeout(() => {
+            setSeeText(1)
+        }, 3000);
+        
+    })
     return(
         <Container behind={seeText} onMouseOver={()=>setSeeText(1)} onMouseOut={()=>setSeeText(0)}>
             <p>
