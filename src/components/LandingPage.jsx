@@ -16,13 +16,14 @@ export default function Init(){
             
         } 
         getTitleName.style.textShadow=shadow;
+        getTitleName.style.transition='all 3s'
         let shadow2=''
          for (let index = 0; index < 10; index++) {
            shadow2 += (shadow2 ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #a5a5a5'
             
         } 
         getTitleDev.style.textShadow=shadow2;
-
+        getTitleDev.style.transition='all 3s'
     })
     return(
         <Container>            
