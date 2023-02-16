@@ -1,20 +1,19 @@
 import styled,{keyframes} from "styled-components"
 export default function Deploys(){
-   
+    let values = 0
     const counterWebRefesh=()=>{
         let wedRefresh;
     if(!localStorage.getItem("reloads")) localStorage.setItem("reloads", 1)
     wedRefresh = +localStorage.getItem("reloads")
     const incrementReloads= wedRefresh + 1
     localStorage.setItem("reloads", incrementReloads)
-    let values = localStorage.getItem("reloads")
-    console.log(values)
+    values += localStorage.getItem("reloads")
     }
     counterWebRefesh()
    
     return(
         <Container>
-            <p className="user-number">contador de visitas</p>
+            <p className="user-number">Visitante numero: {values}</p>
             <AnimationDeploys>
             <div className="carrusel">
             <div className="item1"><a href="https://cartags.netlify.app/" target='_blank' rel="noopener noreferrer">
@@ -80,7 +79,8 @@ const Container=styled.article`
     .user-number{
         width: 40%;
         height: 100%;
-        outline: 2px solid red;
+        color: white;
+        font-weight: 600;
         margin-inline: auto;
         display: grid;
         place-items: center;
