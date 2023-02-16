@@ -1,5 +1,17 @@
 import styled,{keyframes} from "styled-components"
 export default function Deploys(){
+   
+    const counterWebRefesh=()=>{
+        let wedRefresh;
+    if(!localStorage.getItem("reloads")) localStorage.setItem("reloads", 1)
+    wedRefresh = +localStorage.getItem("reloads")
+    const incrementReloads= wedRefresh + 1
+    localStorage.setItem("reloads", incrementReloads)
+    let values = localStorage.getItem("reloads")
+    console.log(values)
+    }
+    counterWebRefesh()
+   
     return(
         <Container>
             <p className="user-number">contador de visitas</p>
@@ -57,7 +69,7 @@ const rotate=keyframes`
         transform: rotateY(360deg);
     }
 `
-const Container=styled.body`
+const Container=styled.article`
     
     min-height: 100vh;
     width: auto;

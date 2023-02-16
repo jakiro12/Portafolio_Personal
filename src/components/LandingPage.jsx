@@ -33,7 +33,7 @@ export default function Init(){
                    <h3 className='my-name'>Lautaro Carreño</h3>
                 </header>
                 <main>
-                <h3 className='my-job' >Full Stack Dev</h3>
+                <h3 className='my-job' >Front-End Dev</h3>
                 </main>
               
                 <ImageWeb/>
