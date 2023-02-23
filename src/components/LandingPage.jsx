@@ -172,6 +172,7 @@ const Direction=styled.article`
         height: 100%;
         display: grid;
         place-items: center;
+        text-align: center;
     }
     h3{
         letter-spacing: 2px;

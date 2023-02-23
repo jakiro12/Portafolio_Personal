@@ -36,12 +36,12 @@ export default function Deploys(){
                 </p></footer>
             </DeployImg>
             </a>
-            </div><div className="item1"><a href="https://calculator-with-react-smoky.vercel.app/" target='_blank' rel="noopener noreferrer">
+            </div><div className="item1"><a href="https://sos-rio-rosario-app-8s7a.vercel.app/" target='_blank' rel="noopener noreferrer">
             <DeployImg>
-            <header className="imgdeploy"><img className="cara1" src={require('../images/calculadora.jpg')} alt="yo"/>
+            <header className="imgdeploy"><img className="cara1" src={require('../images/sos-rio.jpg')} alt="app de viajes"/>
             </header>
             <footer className="description"><p>
-                    Calculadora hecha con react y Hooks, fue un proyecto personal para poner en practica mis conocimientos
+                    Aplicacion web responsive, para reservar viajes y excursiones en barcos desde la Terminal Fluvial de Rosario
                 </p></footer>
             </DeployImg>
             </a>
