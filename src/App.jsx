@@ -1,6 +1,6 @@
 import Init from './components/LandingPage'
 import {HashRouter as Router,Route,Routes} from 'react-router-dom'
-import Deploys from './components/DeployActives'
+
 
 function App() {
 //.color1 {color: #122a46;}
@@ -12,7 +12,6 @@ function App() {
     <Router>    
     <Routes>
       <Route path="/" element={<Init/>} />
-      <Route path="/proyects" element={<Deploys/>} />
         </Routes>
     </Router>
   )

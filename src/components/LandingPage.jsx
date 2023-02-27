@@ -1,65 +1,101 @@
 import styled from 'styled-components';
 import ImageWeb from './SpecialComponents/FirstImage';
 import TextAbout from './SpecialComponents/InfoAboutMe';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import MySkils from './StackComponents/Stack';
+import MyLastestDeploys from './Deployed/RecentDeploys';
 export default function Init(){
-    const[ver,setVer]=useState('hidden')
-    const navigate=useNavigate()
+    const test=useRef(null)
+    const about=useRef(null)
+    const deploys=useRef(null)
+    const scrollWebsite=(elementRef)=>{
+        window.scrollTo({
+            top:elementRef.current.offsetTop,
+            behavior:'smooth',
+        })
+    }
+
     useEffect(()=>{
-        const getTitleName=document.querySelector('.my-name')
-        const getTitleDev=document.querySelector('.my-job')
+        const getTitleName=document.querySelector('.my_name')
+        const getTitleDev=document.querySelector('.my_job')
         let shadow=''
-         for (let index = 0; index < 10; index++) {
-           shadow += (shadow ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #a5a5a5'
-            
+        let shadow2=''
+         for (let index = 0; index < 8; index++) {
+           shadow += (shadow ? ',': '')+ index*1+'px '+ index*1 + 'px 0 #a5a5a5'
+            shadow2+=(shadow2 ? ',' :'') +index*1+ 'px ' +index*1 + 'px 0 #a5a5a5'
         } 
         getTitleName.style.textShadow=shadow;
         getTitleName.style.transition='all 3s'
-        let shadow2=''
-         for (let index = 0; index < 10; index++) {
-           shadow2 += (shadow2 ? ',': '')+ index*-1+'px '+ index*1 + 'px 0 #a5a5a5'
-            
-        } 
-        getTitleDev.style.textShadow=shadow2;
-        getTitleDev.style.transition='all 3s'
+        getTitleDev.style.textShadow=shadow2
+        getTitleDev.style.transition='all 3s'     
     })
     return(
-        <Container>            
-           <div className='btn-photo'>
-            <Direction  time={ver} onMouseOver={()=>setVer('visible')} onMouseOut={()=>setVer('hidden')}>
-                <header >
-                   <h3 className='my-name'>Lautaro Carreño</h3>
-                </header>
-                <main>
-                <h3 className='my-job' >Front-End Dev</h3>
-                </main>
-              
+        <Container>       
+            <nav>
+                <li onClick={()=>scrollWebsite(about)}>About</li>
+                <li onClick={()=>scrollWebsite(test)}>Skills</li>
+                <li onClick={()=>scrollWebsite(deploys)}>Proyectos</li>
+            </nav> 
+           <section className='my_description' ref={about}>
+            <Devname>
+                   <h3 className='my_name'>Soy Lautaro Carreño</h3>
+                   <h3 className='my_job'>Desarrollador Frontend</h3>
+            </Devname>
+            <aside className='more_info'>
                 <ImageWeb/>
-                <button className='btn-proyects'onClick={()=>navigate('/proyects')}>Proyectos</button>
-            </Direction>
-           </div>
-           <div className='my-info'>
-            <div className='about'>
-            <hr className='left'/>
-            <p>Sobre mi</p>
-            <hr className='right'/>
-            </div>
-            <TextAbout/>
-              </div>
+                <TextAbout/>
+                </aside>
+           </section>
+          <section className='proyect_made_it' ref={test}>
+            <MySkils/>
+          </section>
+          <section className='deploys_made_it' ref={deploys}>
+            <MyLastestDeploys/>
+          </section>
+          <footer className='all_about'>derechos reservados</footer>
         </Container>
     )
 }
 const Container=styled.div`
-    height: 100vh;
+    height: 300vh;
     font-size: medium;
     color: white;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 25% 35% 30% 5%;
     position: relative;
     background:#15518e;
+    nav{
+        height: 80%;
+        width: 70%;
+        border-radius: 0% 10% 0% 10% / 0% 100% 0% 100% ;
+        border: 2px groove white;
+        background-color: #50bc34;
+        margin: auto;
+        display: flex;
+        box-shadow: 5px 5px 5px 1px black;
+        justify-content: space-around;
+        align-items: center;
+        li{
+            list-style-type: none;
+            cursor: pointer;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0;
+                height: auto;
+                left: 0;
+                bottom: -10%;
+                border-bottom: 1px solid white;
+            }
+            &:hover::after{
+                transition: all 1s;
+                width: 100%;
+            }
+        }
+    }
    @media screen and (max-width:847px){
         display: grid;
         height: 200vh;
@@ -67,43 +103,19 @@ const Container=styled.div`
         grid-template-rows: repeat(2,1fr);
    }
  
-    .btn-photo{
-        display: flex;
-        justify-content: center;
-        width:  45%;
-        margin: auto;
-        height: 520px;
-        border: 2px solid #96c2ee15;
-        transition: all 1.5s;
-        &:hover{
-            transition: all 1.5s;
-            transform: scale(1.05);
-            box-shadow: 2px 2px 2px black,
-            4px 4px 2px black,
-            6px 6px 2px black,
-            8px 8px 2px black,
-            10px 10px 2px black,
-            12px 12px 2px black,
-            14px 14px 2px black;
-        }
+    .my_description{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 40% 10%;
+        width:  auto;
+        height: 100%; 
         @media screen and (max-width:847px){
             width: min(450px,80%) ;
             height: 70%;
             margin: auto;
    }
        }
-    .my-info{
-        display: grid;
-        justify-content: center;
-        width:  45%;
-        height: 420px;
-        margin: auto; 
-        @media screen and (max-width:847px){
-        width: min(400px,70%);
-        margin-inline: auto;
-        overflow:hidden;
-        }
-    }
+    
     .about{
         width: 80%;
         height: 30px;
@@ -132,55 +144,40 @@ const Container=styled.div`
             border: none;
             border-radius:  0 100% 0 0;
     }
-`
-const Direction=styled.article`
-    height: 90%;
-    width: 70%;
-    outline: 2px solid black;
-    margin: auto;
-    display: grid;
-    justify-content: center;
-    position: relative;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 35% 45%;
-    .btn-proyects{
-        position: absolute;
-        top: 77%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        visibility: ${(props)=>props.time};
-        background: #50bc34;
-        border-radius:  25% 25% 25% 25%/ 100% 100% 100% 100%;
-        border: none;
-        padding:2% ;
-        color: white;
-        &:hover{
-            cursor: pointer;
-        }
-        
+    .more_info{
+        margin-inline:auto ;
+        display: flex;
+        width: 60%;
+        height: auto;
+        justify-content: space-around;
+        align-items: center;
     }
-    header{
-        width: auto;
-        height: 50%;        
-        margin-top: auto;
-        text-align: center;
-     
-        
-        }
-    main {
+    .proyect_made_it{
         width: auto;
         height: 100%;
-        display: grid;
-        place-items: center;
-        text-align: center;
     }
+    .deploys_made_it{
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .all_about{
+        outline: 2px solid blanchedalmond;
+    }
+`
+const Devname=styled.article`
+    height: 50%;
+    width: 60%;
+    margin-top: auto;
+    margin-left: auto;
+    display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(2,50%);
     h3{
         letter-spacing: 2px;
-        font-size: x-large;
-        transform: rotate(-15deg) skew(25deg);
-        position: relative;
-      
-    }
-    
-    
+        font-size: xx-large;
+        transform:  skew(10deg);     
+    }    
 `
