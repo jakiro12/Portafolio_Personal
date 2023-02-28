@@ -77,6 +77,7 @@ const Container=styled.div`
         box-shadow: 5px 5px 5px 1px black;
         justify-content: space-around;
         align-items: center;
+        transition: all 1s;
         li{
             list-style-type: none;
             cursor: pointer;
@@ -98,9 +99,12 @@ const Container=styled.div`
     }
    @media screen and (max-width:847px){
         display: grid;
-        height: 200vh;
+        height: 300vh;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: 5% 25% 35% 30% 5%;
+        nav{
+            height: 60%;
+        }
    }
  
     .my_description{

@@ -53,12 +53,11 @@ const InfoSkills=styled.article`
         width: 90%;
         height: 100%;
         margin-inline:auto ;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(2,1fr);
+        grid-template-columns:  repeat(auto-fit,minmax(250px,1fr));
+        grid-template-rows: auto;
         .stack{
             width: 60%;
             height: 80%;
-            
             margin: auto;
             border-radius: 10px;
             overflow: hidden;
@@ -89,4 +88,39 @@ const InfoSkills=styled.article`
             width: 100%;
         }
     }
+    @media screen and (max-width:847px){
+        main{
+            width: 100%;
+            height: 80%;
+            .stack{
+                width: 50%;
+                height: 90%;
+                display: flex;
+                justify-content: center;
+               // outline: 2px solid black;
+                img{
+                        width: 70%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+            }
+        }
+   }
+   @media screen and (max-width:440px){
+    main{
+        grid-template-columns:  repeat(auto-fit,minmax(150px,1fr));
+        .stack{
+                width: 50%;
+                height: 90%;
+                display: flex;
+                justify-content: center;
+               // outline: 2px solid black;
+                img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+            }
+    }
+   }
 `
