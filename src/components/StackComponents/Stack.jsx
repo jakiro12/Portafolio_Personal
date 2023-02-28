@@ -60,14 +60,22 @@ const InfoSkills=styled.article`
             height: 80%;
             margin: auto;
             border-radius: 10px;
-            overflow: hidden;
+           // overflow: hidden;
             position: relative;
+            perspective: 700px;
+            perspective-origin: top;
             img{
+                border-radius: 10px;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                transition: all 2s;
+                &:hover{
+                    transform:  rotateY(-30deg) scale(0.8) translateZ(-50px) ;
+                    box-shadow: 5px 0px 10px black;
+                    transition: all 2s;
+                }   
             }
-         
         }
     }
     header{
