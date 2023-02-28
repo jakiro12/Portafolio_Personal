@@ -31,7 +31,7 @@ const Container=styled.div`
     opacity: ${(props)=>props.behind};
     padding: 5px;
     @media screen and (max-width:847px) {
-        width: min(400px,90%);
+        width: 45%;
         margin-inline: auto;
         overflow-y: scroll;
     }

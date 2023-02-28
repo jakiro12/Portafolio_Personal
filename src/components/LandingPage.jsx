@@ -105,6 +105,9 @@ const Container=styled.div`
         nav{
             height: 60%;
         }
+        .my_description .more_info{
+                width: 100%;
+            }   
    }
  
     .my_description{
@@ -113,11 +116,7 @@ const Container=styled.div`
         grid-template-rows: 50% 40% 10%;
         width:  auto;
         height: 100%; 
-        @media screen and (max-width:847px){
-            width: min(450px,80%) ;
-            height: 70%;
-            margin: auto;
-   }
+
        }
     
     .about{
@@ -184,4 +183,9 @@ const Devname=styled.article`
         font-size: xx-large;
         transform:  skew(10deg);     
     }    
+    @media screen and (max-width:847px){
+        margin-left: 0;
+        margin-top: 0;
+        margin: auto;
+    }
 `
