@@ -131,5 +131,19 @@ const BoxDeploys=styled.div`
             background-size: cover;
         }
     }
+    @media screen and (max-width:847px){
+        grid-template-columns:  repeat(auto-fit,minmax(150px,1fr));
+            grid-template-rows: 0.5fr;
+            height: 70%;
+            row-gap: 50px;
+            margin-bottom: auto;
+        .card_description{
+            font-size: 14px;
+           
+            width: 100%;
+            height: 70%;
+            .img_deploy{}
+        }
+    }
 
 `
