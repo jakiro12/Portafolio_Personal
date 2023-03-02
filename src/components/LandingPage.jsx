@@ -118,7 +118,7 @@ const Container=styled.div`
         grid-template-rows: 5% 25% 35% 30% 5%;
         nav{
             height: 60%;
-            width: 80%;
+            width: 85%;
         }
         .my_description .more_info{
                 width: 100%;
@@ -184,7 +184,7 @@ const Container=styled.div`
     .all_about{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         .logo_social{
             width: 40%;
             height: 50%;
