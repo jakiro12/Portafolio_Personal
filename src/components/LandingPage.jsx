@@ -61,6 +61,7 @@ export default function Init(){
             <MyLastestDeploys/>
           </section>
           <footer className='all_about'>
+            <p>Mis redes de contacto</p>
             <div className='logo_social'>
             <button onClick={()=>VisitMyMedias(socialMediaUrls.github)}></button>
             <button></button>
@@ -182,9 +183,9 @@ const Container=styled.div`
         align-items: center;
     }
     .all_about{
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        display: grid;
+        place-items: center;
+        background-color: #50bc34;
         .logo_social{
             width: 40%;
             height: 50%;
