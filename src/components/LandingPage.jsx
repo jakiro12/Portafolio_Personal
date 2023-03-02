@@ -4,7 +4,15 @@ import TextAbout from './SpecialComponents/InfoAboutMe';
 import { useEffect, useRef } from 'react';
 import MySkils from './StackComponents/Stack';
 import MyLastestDeploys from './Deployed/RecentDeploys';
+const socialMediaUrls={
+    linkedin:'https://www.linkedin.com/in/lautaro-carre%C3%B1o-elias-9b9248b1/',
+    github:'https://github.com/jakiro12',
+    wsp:''
+}
 export default function Init(){
+    const VisitMyMedias=(e)=>{
+        window.open(e,'_blank')
+    }
     const test=useRef(null)
     const about=useRef(null)
     const deploys=useRef(null)
@@ -52,7 +60,13 @@ export default function Init(){
           <section className='deploys_made_it' ref={deploys}>
             <MyLastestDeploys/>
           </section>
-          <footer className='all_about'>derechos reservados</footer>
+          <footer className='all_about'>
+            <div className='logo_social'>
+            <button onClick={()=>VisitMyMedias(socialMediaUrls.github)}></button>
+            <button></button>
+            <button onClick={()=>VisitMyMedias(socialMediaUrls.linkedin)}></button>
+            </div>
+          </footer>
         </Container>
     )
 }
@@ -104,6 +118,7 @@ const Container=styled.div`
         grid-template-rows: 5% 25% 35% 30% 5%;
         nav{
             height: 60%;
+            width: 80%;
         }
         .my_description .more_info{
                 width: 100%;
@@ -167,7 +182,35 @@ const Container=styled.div`
         align-items: center;
     }
     .all_about{
-        outline: 2px solid blanchedalmond;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo_social{
+            width: 40%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            button{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                &:nth-child(1){
+                    background-image: url('https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-github-1.png');
+                     background-size: cover;
+                }
+                &:nth-child(2){
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png');
+                     background-size: cover;
+                }
+                &:nth-child(3){
+                    background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
+                     background-size: cover;
+                }
+            }
+        }
     }
 `
 const Devname=styled.article`

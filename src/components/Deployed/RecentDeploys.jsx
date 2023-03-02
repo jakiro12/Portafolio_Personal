@@ -118,7 +118,7 @@ const BoxDeploys=styled.div`
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        margin-left: 2%;
+        margin-left: 10%;
         cursor: pointer;
         background: transparent;
         border: none;
