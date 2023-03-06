@@ -132,7 +132,7 @@ const BoxDeploys=styled.div`
         }
     }
     @media screen and (max-width:847px){
-        grid-template-columns:  repeat(auto-fit,minmax(150px,1fr));
+        grid-template-columns:  repeat(auto-fit,minmax(min(150px,100%),1fr));
             grid-template-rows: 0.5fr;
             height: 70%;
             row-gap: 50px;

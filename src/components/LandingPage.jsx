@@ -230,6 +230,6 @@ const Devname=styled.article`
     @media screen and (max-width:847px){
         margin-left: 0;
         margin-top: 0;
-        margin: auto;
+        margin-inline: auto;
     }
 `

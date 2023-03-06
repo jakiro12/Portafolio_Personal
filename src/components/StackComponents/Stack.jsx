@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-
+import AsyncAwaitAnimate from '../StackAnimations/FuncitonsAnimate';
+import { useState } from 'react';
 export default function MySkils(){
+    const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
     return(
         <InfoSkills>
             <header>
@@ -9,7 +11,7 @@ export default function MySkils(){
                 </p>
             </header>
             <main>
-                <div className='stack'>
+                <div className='stack' onMouseOver={()=>setJavaScriptAnimation('visible')} onMouseLeave={()=>setJavaScriptAnimation('hidden')}>
                     <img src={require('../../images/javascript.png')} alt='logo JS'/>
                 </div>
                 <div className='stack'>
@@ -36,7 +38,7 @@ export default function MySkils(){
                 
             </main>
             <footer>
-                animacion por cada logo
+                <AsyncAwaitAnimate status={javaScriptAnimation}/>
             </footer>
         </InfoSkills>
     )
@@ -95,6 +97,13 @@ const InfoSkills=styled.article`
             background-color: #f2e98183;
             width: 100%;
         }
+    }
+    footer{
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     @media screen and (max-width:847px){
         main{
