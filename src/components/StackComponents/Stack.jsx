@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import AsyncAwaitAnimate from '../StackAnimations/FuncitonsAnimate';
 import { useState } from 'react';
+import StatusHttpCss from '../StackAnimations/StatusCodeCss';
 export default function MySkils(){
     const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
+    const[cssAnimation,setCssAniamtion]=useState('hidden')
     return(
         <InfoSkills>
             <header>
@@ -14,7 +16,7 @@ export default function MySkils(){
                 <div className='stack' onMouseOver={()=>setJavaScriptAnimation('visible')} onMouseLeave={()=>setJavaScriptAnimation('hidden')}>
                     <img src={require('../../images/javascript.png')} alt='logo JS'/>
                 </div>
-                <div className='stack'>
+                <div className='stack'  onMouseOver={()=>setCssAniamtion('visible')} vocab onMouseLeave={()=>setCssAniamtion('hidden')}>
                 <img src={require('../../images/css.png')} alt='logo CSS'/>
                 </div>
                 <div className='stack'>
@@ -39,6 +41,7 @@ export default function MySkils(){
             </main>
             <footer>
                 <AsyncAwaitAnimate status={javaScriptAnimation}/>
+                <StatusHttpCss status={cssAnimation}/>
             </footer>
         </InfoSkills>
     )
@@ -62,16 +65,15 @@ const InfoSkills=styled.article`
             height: 80%;
             margin: auto;
             border-radius: 10px;
-           // overflow: hidden;
             position: relative;
             perspective: 700px;
             perspective-origin: top;
+            transition: all 2s;
             img{
                 border-radius: 10px;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                transition: all 2s;
                 &:hover{
                     transform:  rotateY(-30deg) scale(0.8) translateZ(-50px) ;
                     box-shadow: 5px 0px 10px black;

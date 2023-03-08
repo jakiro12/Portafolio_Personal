@@ -22,7 +22,6 @@ const FunctionShow=styled.div`
     position: absolute;
     width: fit-content;
     height: fit-content;    
-    border: 2px solid black;
     animation: ${move} 4s infinite;
 `
 
