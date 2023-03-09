@@ -43,6 +43,7 @@ const ResponseCode=styled.div`
     perspective: 700px;
     place-items: center;
     position: relative;
+    --status-size:25px;
     .code_text{
         width: 50%;
         position: absolute;
@@ -52,14 +53,14 @@ const ResponseCode=styled.div`
         transform-style: preserve-3d;
      transform: rotateY(-20deg) rotateX(-10deg) translateZ(0);  
      &::after{
-        font-size: 40px;
+        font-size: var(--status-size);
         content: "Status 102 Loading...";
         white-space: pre;
         text-align: center;
         height: 100%;
         width: 100%;
         position: absolute;
-        top: 0px;
+        top: 25%;
         color: #0fc533;
         letter-spacing: -2px;
         text-shadow: 4px 0 1px rgba(0, 0, 0, 0.13);

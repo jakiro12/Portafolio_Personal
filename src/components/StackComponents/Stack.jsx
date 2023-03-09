@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import AsyncAwaitAnimate from '../StackAnimations/FuncitonsAnimate';
 import { useState } from 'react';
 import StatusHttpCss from '../StackAnimations/StatusCodeCss';
+import SeeAllHtml from '../StackAnimations/AllHtmlScroll';
 export default function MySkils(){
     const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
     const[cssAnimation,setCssAniamtion]=useState('hidden')
+    const[htmlAnimation,setHtmlAnimation]=useState('hidden')
+   
     return(
         <InfoSkills>
             <header>
@@ -16,10 +19,10 @@ export default function MySkils(){
                 <div className='stack' onMouseOver={()=>setJavaScriptAnimation('visible')} onMouseLeave={()=>setJavaScriptAnimation('hidden')}>
                     <img src={require('../../images/javascript.png')} alt='logo JS'/>
                 </div>
-                <div className='stack'  onMouseOver={()=>setCssAniamtion('visible')} vocab onMouseLeave={()=>setCssAniamtion('hidden')}>
+                <div className='stack'  onMouseOver={()=>setCssAniamtion('visible')} onMouseLeave={()=>setCssAniamtion('hidden')}>
                 <img src={require('../../images/css.png')} alt='logo CSS'/>
                 </div>
-                <div className='stack'>
+                <div className='stack' onMouseOver={()=>setHtmlAnimation('visible')} onMouseLeave={()=>setHtmlAnimation('hidden')}>
                 <img src={require('../../images/html.png')} alt='logo HTML'/>
                 </div>
                 <div className='stack'>
@@ -39,9 +42,10 @@ export default function MySkils(){
                 </div>
                 
             </main>
-            <footer>
+            <footer className='animations_container'>
                 <AsyncAwaitAnimate status={javaScriptAnimation}/>
                 <StatusHttpCss status={cssAnimation}/>
+                <SeeAllHtml status={htmlAnimation}/>
             </footer>
         </InfoSkills>
     )
@@ -106,6 +110,7 @@ const InfoSkills=styled.article`
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     @media screen and (max-width:847px){
         main{
