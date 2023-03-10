@@ -3,10 +3,13 @@ import AsyncAwaitAnimate from '../StackAnimations/FuncitonsAnimate';
 import { useState } from 'react';
 import StatusHttpCss from '../StackAnimations/StatusCodeCss';
 import SeeAllHtml from '../StackAnimations/AllHtmlScroll';
+import StateIncrement from '../StackAnimations/ReactStateAnimation';
 export default function MySkils(){
     const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
     const[cssAnimation,setCssAniamtion]=useState('hidden')
     const[htmlAnimation,setHtmlAnimation]=useState('hidden')
+    const[reactAnimation,setReactAnimation]=useState('hidden')
+
    
     return(
         <InfoSkills>
@@ -25,7 +28,7 @@ export default function MySkils(){
                 <div className='stack' onMouseOver={()=>setHtmlAnimation('visible')} onMouseLeave={()=>setHtmlAnimation('hidden')}>
                 <img src={require('../../images/html.png')} alt='logo HTML'/>
                 </div>
-                <div className='stack'>
+                <div className='stack' onMouseOver={()=>setReactAnimation('visible')} onMouseLeave={()=>setReactAnimation('hidden')}>
                 <img src={require('../../images/react.png')} alt='logo React'/>
                 </div>
                 <div className='stack'>
@@ -46,6 +49,7 @@ export default function MySkils(){
                 <AsyncAwaitAnimate status={javaScriptAnimation}/>
                 <StatusHttpCss status={cssAnimation}/>
                 <SeeAllHtml status={htmlAnimation}/>
+                <StateIncrement status={reactAnimation}/>
             </footer>
         </InfoSkills>
     )
