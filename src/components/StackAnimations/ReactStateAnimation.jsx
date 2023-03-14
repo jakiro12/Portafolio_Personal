@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 export default function StateIncrement({status}){
-    const[count,setCount]=useState(10)
+    const[count,setCount]=useState(32)
     useEffect(()=>{
         if(status === 'visible'){
             setTimeout(
@@ -14,7 +14,7 @@ export default function StateIncrement({status}){
     })
     return(
         <Phrase appear={status} font={count}>
-            Custom Hooks {count}
+            Custom Hooks {count} 
         </Phrase>
     )
 }

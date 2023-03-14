@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export default function QueryShow({status}){
     return(
         <QuerySelector appear={status}>
-            query de sql
+           SELECT * FROM users WHERE email = ‘xxx@xxx.xxx’ AND password = md5(‘xxx’) OR 1 = 1 — ]’);
         </QuerySelector>
     )
 }

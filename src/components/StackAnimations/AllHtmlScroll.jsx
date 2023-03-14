@@ -1,8 +1,20 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 export default function SeeAllHtml({status}){
+    useEffect(()=>{
+
+        const myBox=document.querySelector('.scolling')
+        const scrollBox=()=>{
+            let heightTo=20
+            myBox.scrollTop+=heightTo
+            heightTo+= 20
+        }
+        setTimeout( scrollBox(),4000)
+      
+    })
     return(
-        <AllHtml appear={status}>
+        <AllHtml appear={status} className='scolling'>
       <pre id="codeCard">
            {`
              <div class='container'>
