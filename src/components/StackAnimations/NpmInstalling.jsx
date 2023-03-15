@@ -25,7 +25,7 @@ const Package=styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
-    font-size: 25px;
+    font-size: 20px;
     visibility: ${(props)=>props.appear};
     .bar{
         width: 50px;

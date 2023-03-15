@@ -3,15 +3,18 @@ import styled from 'styled-components';
 
 export default function SeeAllHtml({status}){
     useEffect(()=>{
-
-        const myBox=document.querySelector('.scolling')
-        const scrollBox=()=>{
-            let heightTo=20
-            myBox.scrollTop+=heightTo
-            heightTo+= 20
+        let move=200
+        if(status === 'visible'){
+            const myBox=document.querySelector('.scolling')
+            function moveDown(){
+                myBox.scrollBy({
+                    top:move,
+                    behavior:'smooth'
+                })
+            }
+            setTimeout(moveDown,1000)
+            move+=100
         }
-        setTimeout( scrollBox(),4000)
-      
     })
     return(
         <AllHtml appear={status} className='scolling'>

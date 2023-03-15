@@ -13,6 +13,9 @@ const QuerySelector=styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
-    outline: 2px solid black;
+   // outline: 2px solid black;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
     visibility: ${(props)=>props.appear};
 ` 
