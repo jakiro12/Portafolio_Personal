@@ -6,6 +6,7 @@ import SeeAllHtml from '../StackAnimations/AllHtmlScroll';
 import StateIncrement from '../StackAnimations/ReactStateAnimation';
 import InstallPack from '../StackAnimations/NpmInstalling';
 import QueryShow from '../StackAnimations/SqlQuery';
+import BoxData from '../StackAnimations/PostgreAnimation';
 export default function MySkils(){
     const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
     const[cssAnimation,setCssAniamtion]=useState('hidden')
@@ -13,6 +14,7 @@ export default function MySkils(){
     const[reactAnimation,setReactAnimation]=useState('hidden')
     const[nodeAnimation,setNodeAnimation]=useState('hidden')
     const[sqlAnimation,setSqlAnimation]=useState('hidden')
+    const[postgreAnimation,setPostgreAnimation]=useState('hidden')
     return(
         <InfoSkills>
             <header>
@@ -36,7 +38,7 @@ export default function MySkils(){
                 <div className='stack' onMouseOver={()=>setSqlAnimation('visible')} onMouseLeave={()=>setSqlAnimation('hidden')}>
                 <img src={require('../../images/sql.png')} alt='logo SQL'/>
                 </div>
-                <div className='stack'>
+                <div className='stack'  onMouseOver={()=>setPostgreAnimation('visible')} onMouseLeave={()=>setPostgreAnimation('hidden')}>
                 <img src={require('../../images/postgresql.png')} alt='logo PostgreSQL'/>
                 </div>
                 <div className='stack'>
@@ -54,6 +56,7 @@ export default function MySkils(){
                 <StateIncrement status={reactAnimation}/>
                 <InstallPack status={nodeAnimation} />
                 <QueryShow status={sqlAnimation}/>
+                <BoxData status={postgreAnimation}/>
             </footer>
         </InfoSkills>
     )
