@@ -13,7 +13,7 @@ const QuerySelector=styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
-   // outline: 2px solid black;
+    box-shadow: inset 0px 0px 50px 5px #50bc34;
     text-align: center;
     padding-left: 2%;
     padding-right: 2%;
