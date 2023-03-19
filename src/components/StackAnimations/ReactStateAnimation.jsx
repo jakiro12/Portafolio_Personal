@@ -10,7 +10,7 @@ export default function StateIncrement({status}){
                 function(){
                 textChange.style.fontSize=`${count}px`
             setCount(count + 1)
-                }, 1500
+                }, 1000
             )
         }else{
             textChange.style.fontSize=`16px`
@@ -31,9 +31,9 @@ const Phrase = styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
-    outline: 2px solid black;
     visibility: ${(props)=>props.appear};
     .text_render{
-        transition: all 1.5s;
+        transition: all 1s;
+        text-shadow: 5px 0px black;
     }
 `

@@ -100,7 +100,7 @@ const BoxDeploys=styled.div`
     .about_this_deploy{
         padding: 1%;
         width: 80%;
-        font-size: small;
+        font-size: medium;
         margin-inline: auto;
         display: grid;
         grid-template-columns: 1fr;

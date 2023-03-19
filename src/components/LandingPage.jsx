@@ -73,7 +73,7 @@ export default function Init(){
 }
 const Container=styled.div`
     height: 300vh;
-    font-size: medium;
+    font-size: x-large;
     color: white;
     width: 100%;
     display: grid;

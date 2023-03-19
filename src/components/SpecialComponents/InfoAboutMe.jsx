@@ -25,7 +25,7 @@ const Container=styled.div`
     height: 200px;
     display: grid;
     margin-inline: auto;
-    font-size: medium;
+    font-size: large;
     font-weight: 300;
     transition: all 3s;
     opacity: ${(props)=>props.behind};
