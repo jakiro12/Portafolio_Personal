@@ -57,7 +57,7 @@ const Schema=styled.div`
         width: 120px;
         height: 80px;
         background-color: white;
-        animation: ${rotation} 6s linear infinite;
+        animation: ${rotation} 10s linear infinite;
         transform-style: preserve-3d;
         position: relative;
         outline: 1px solid black;

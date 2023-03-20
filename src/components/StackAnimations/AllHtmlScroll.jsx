@@ -61,7 +61,8 @@ const AllHtml=styled.div`
     width: 100%;
     overflow-y: scroll;
     position: absolute;
-    outline: 2px solid black;
+    border-top: 2px groove black;
+    border-bottom:2px groove black ;
     visibility: ${(props)=>props.appear};
 
 `
