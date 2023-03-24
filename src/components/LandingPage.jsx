@@ -7,7 +7,7 @@ import MyLastestDeploys from './Deployed/RecentDeploys';
 const socialMediaUrls={
     linkedin:'https://www.linkedin.com/in/lautaro-carre%C3%B1o-elias-9b9248b1/',
     github:'https://github.com/jakiro12',
-    wsp:''
+    wsp:'https://api.whatsapp.com/send?phone=5493424420130'
 }
 export default function Init(){
     const VisitMyMedias=(e)=>{
@@ -64,7 +64,7 @@ export default function Init(){
             <p>Mis redes de contacto</p>
             <div className='logo_social'>
             <button onClick={()=>VisitMyMedias(socialMediaUrls.github)}></button>
-            <button></button>
+            <button  onClick={()=>VisitMyMedias(socialMediaUrls.wsp)}></button>
             <button onClick={()=>VisitMyMedias(socialMediaUrls.linkedin)}></button>
             </div>
           </footer>
