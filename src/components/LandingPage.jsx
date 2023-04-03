@@ -81,6 +81,7 @@ const Container=styled.div`
     grid-template-rows: 5% 25% 35% 30% 5%;
     position: relative;
     background:#15518e;
+    overflow-x:hidden;
     nav{
         height: 80%;
         width: 70%;
@@ -117,6 +118,7 @@ const Container=styled.div`
         height: 300vh;
         grid-template-columns: 1fr;
         grid-template-rows: 5% 25% 35% 30% 5%;
+        overflow-x:hidden;
         nav{
             height: 60%;
             width: 85%;
