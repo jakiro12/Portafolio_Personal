@@ -144,7 +144,7 @@ const InfoSkills=styled.article`
             }
         }
    }
-   @media screen and (min-width: 450px) and (max-width: 620px) {
+   @media screen and (min-width: 440px) and (max-width: 620px) {
   main{
     grid-template-columns:  repeat(auto-fit,minmax(200px,1fr));
   }
