@@ -74,30 +74,27 @@ export default function Init(){
 const Container=styled.div`
     height: 300vh;
     font-size: large;
-    color: white;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5% 25% 35% 30% 5%;
     position: relative;
-    background:#15518e;
     overflow-x:hidden;
     nav{
-        height: 80%;
-        width: 70%;
-        border-radius: 0% 10% 0% 10% / 0% 100% 0% 100% ;
-        border: 2px groove white;
-        background-color: #50bc34;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg , #ffffff 65%,#3eff0eba );
         margin: auto;
         display: flex;
-        box-shadow: 5px 5px 5px 1px black;
         justify-content: space-around;
         align-items: center;
-        transition: all 1s;
+        transition: all 0.7s;
         li{
             list-style-type: none;
             cursor: pointer;
             position: relative;
+            font-weight: 600;
+            transition: all 0.7s;
             &::after{
                 content: '';
                 position: absolute;
@@ -105,12 +102,15 @@ const Container=styled.div`
                 height: auto;
                 left: 0;
                 bottom: -10%;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid black;
             }
             &:hover::after{
-                transition: all 1s;
+                transition: all 0.7s;
                 width: 100%;
             }
+        }
+        li:hover{
+            transform: scale(1.05);
         }
     }
    @media screen and (max-width:847px){

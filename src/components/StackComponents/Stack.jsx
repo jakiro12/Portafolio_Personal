@@ -108,13 +108,14 @@ const InfoSkills=styled.article`
     .stack_title{
         margin-left: 10%;
         position: relative;
+        font-size: x-large;
         &::before{
             content: '';
             position: absolute;
             left: 0;
             bottom: -10%;
             height: 20%;
-            background-color: #f2e98183;
+            background-color: #000000;
             width: 100%;
         }
     }
@@ -135,7 +136,6 @@ const InfoSkills=styled.article`
                 height: 90%;
                 display: flex;
                 justify-content: center;
-               // outline: 2px solid black;
                 img{
                         width: 70%;
                         height: 100%;
