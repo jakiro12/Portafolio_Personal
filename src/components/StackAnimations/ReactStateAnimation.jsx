@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect,useState } from 'react';
 import styled from 'styled-components';
 export default function StateIncrement({status}){
     const[count,setCount]=useState(16)
@@ -16,7 +15,7 @@ export default function StateIncrement({status}){
             textChange.style.fontSize=`16px`
             setCount(16)
         }
-    })
+    },[status,count])
     return(
         <Phrase appear={status} font={count}>
           <p className='text_render'>Crea tus Hooks </p>  
@@ -33,7 +32,7 @@ const Phrase = styled.div`
     position: absolute;
     visibility: ${(props)=>props.appear};
     .text_render{
-        transition: all 1s;
-        text-shadow: 5px 0px black;
+        transition: all 0.7s;
+        font-weight: bold;
     }
 `

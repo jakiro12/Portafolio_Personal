@@ -4,12 +4,15 @@ import TextAbout from './SpecialComponents/InfoAboutMe';
 import { useEffect, useRef } from 'react';
 import MySkils from './StackComponents/Stack';
 import MyLastestDeploys from './Deployed/RecentDeploys';
+import { useState } from 'react';
+import ModalToSeeDetails from './ResizeProjectSelected/ModalForEveryProject';
 const socialMediaUrls={
     linkedin:'https://www.linkedin.com/in/lautaro-carre%C3%B1o-elias-9b9248b1/',
     github:'https://github.com/jakiro12',
     wsp:'https://api.whatsapp.com/send?phone=5493424420130'
 }
 export default function Init(){
+    const[showModalInfo,setShowModalInfo]=useState(false)
     const VisitMyMedias=(e)=>{
         window.open(e,'_blank')
     }
@@ -38,7 +41,8 @@ export default function Init(){
         getTitleDev.style.transition='all 3s'     
     })
     return(
-        <Container>       
+        <Container>    
+            {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)}/>}   
             <nav>
                 <li onClick={()=>scrollWebsite(about)}>About</li>
                 <li onClick={()=>scrollWebsite(test)}>Skills</li>
@@ -58,7 +62,7 @@ export default function Init(){
             <MySkils/>
           </section>
           <section className='deploys_made_it' ref={deploys}>
-            <MyLastestDeploys/>
+            <MyLastestDeploys openDetails={()=>setShowModalInfo(true)}/>
           </section>
           <footer className='all_about'>
             <p>Mis redes de contacto</p>

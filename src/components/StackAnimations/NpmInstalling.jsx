@@ -20,7 +20,7 @@ const rotate=keyframes`
 const Package=styled.div`
     height: 100%;
     width: 100%;
-    background-color: #2c2c32;
+    background-color: #3c3c43;
     display: flex;
     justify-content: center;
     align-items: center;

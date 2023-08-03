@@ -11,13 +11,14 @@ const allUrlDeploys={
 
 }
 
-export default function MyLastestDeploys(){
+export default function MyLastestDeploys({openDetails}){
     const LinkTo=(e)=>{
         window.open(e,'_blank')
     }
     return(
         <BoxDeploys>
-            <div className="card_description">
+           
+            <div className="card_description" onClick={openDetails}>
                 <img className='img_deploy' src={require('../../images/rio-muestra.jpg')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
@@ -31,7 +32,7 @@ export default function MyLastestDeploys(){
                 </div>
                 
             </div>
-            <div className="card_description">
+            <div className="card_description" onClick={openDetails}>
                     <img className='img_deploy' src={require('../../images/disney.jpg')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
@@ -44,7 +45,7 @@ export default function MyLastestDeploys(){
                 </div>
             </div>
 
-            <div className="card_description">
+            <div className="card_description" onClick={openDetails}>
                 <img className='img_deploy' src={require('../../images/cartags.jpg')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
@@ -57,7 +58,7 @@ export default function MyLastestDeploys(){
                     </div>
                 </div>
             </div>
-            <div className="card_description">
+            <div className="card_description" onClick={openDetails}>
                 <img className='img_deploy' src={require('../../images/notfound.png')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
@@ -76,18 +77,17 @@ export default function MyLastestDeploys(){
 const BoxDeploys=styled.div`
     width: 90%;
     height: 100%;
-  //  outline: 2px solid black;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
     .card_description{
         width: 70%;
         height: 90%;
-        //outline: 2px solid black;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 65% 35% ;
+        cursor: sw-resize;
         .img_deploy{
             width: 80%;
             object-fit: cover;
