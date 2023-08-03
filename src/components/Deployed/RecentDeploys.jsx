@@ -11,63 +11,51 @@ const allUrlDeploys={
 
 }
 
-export default function MyLastestDeploys({openDetails}){
+export default function MyLastestDeploys({openDetails,projectChosen}){
     const LinkTo=(e)=>{
         window.open(e,'_blank')
+    }
+    const handleProjectSelected=(number)=>{
+        openDetails()
+        projectChosen(number)
     }
     return(
         <BoxDeploys>
            
-            <div className="card_description" onClick={openDetails}>
+            <div className="card_description" onClick={()=>handleProjectSelected(1)}>
                 <img className='img_deploy' src={require('../../images/rio-muestra.jpg')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
                         Aplicacion Web adaptada a moviles para reservar viajes y excursiones en la terminal fluvial 
                         de Rosario.
                     </p>
-                    <div className='btn_see'>
-                    <button className='logo' onClick={()=>LinkTo(allUrlDeploys.rio)}>
-                        </button><button  className='logo' onClick={()=>LinkTo(allUrlDeploys.repo_rio)}></button>
-                    </div>
                 </div>
                 
             </div>
-            <div className="card_description" onClick={openDetails}>
+            <div className="card_description" onClick={()=>handleProjectSelected(2)}>
                     <img className='img_deploy' src={require('../../images/disney.jpg')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
                        Clon de disney plus basico con auth de firebase, solo visual
                     </p>
-                    <div className='btn_see'>
-                    <button className='logo' onClick={()=>LinkTo(allUrlDeploys.disney)}></button>
-                    <button  className='logo' onClick={()=>LinkTo(allUrlDeploys.repo_disney)}></button>
-                    </div>
                 </div>
             </div>
 
-            <div className="card_description" onClick={openDetails}>
+            <div className="card_description" onClick={()=>handleProjectSelected(3)}>
                 <img className='img_deploy' src={require('../../images/cartags.jpg')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
                        Aplicacion Web para crear diseños de tarjetas de usuario unicos, totalmente editable 
                        desde la misma web
                     </p>
-                    <div className='btn_see'>
-                    <button className='logo' onClick={()=>LinkTo(allUrlDeploys.cartags)}></button>
-                    <button  className='logo' onClick={()=>LinkTo(allUrlDeploys.repo_cartags)}></button>
-                    </div>
                 </div>
             </div>
-            <div className="card_description" onClick={openDetails}>
+            <div className="card_description" onClick={()=>handleProjectSelected(4)}>
                 <img className='img_deploy' src={require('../../images/notfound.png')} alt="img logo" />
                 <div className='about_this_deploy'>
                     <p>
                     Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais
                     </p>
-                    <div className='btn_see'>
-                    <button className='logo' onClick={()=>LinkTo(allUrlDeploys.skate)}></button>
-                    <button  className='logo' onClick={()=>LinkTo(allUrlDeploys.repo_app)}></button>
-                    </div>
                 </div>
             </div>
             </BoxDeploys>
@@ -106,31 +94,6 @@ const BoxDeploys=styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-    .btn_see{
-        width:auto ;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-    }
-    .logo{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-left: 10%;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        &:nth-child(2){
-            background-image: url('https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-github-1.png');
-            background-size: cover;
-        }
-        &:nth-child(1){
-            background-image:url('https://icon-library.com/images/play-icon-white-png/play-icon-white-png-26.jpg') ;
-            background-size: cover;
-        }
-    }
     @media screen and (max-width:847px){
         grid-template-columns:  repeat(auto-fit,minmax(min(150px,100%),1fr));
             grid-template-rows: 0.5fr;
@@ -139,10 +102,8 @@ const BoxDeploys=styled.div`
             margin-bottom: auto;
         .card_description{
             font-size: 14px;
-           
             width: 100%;
             height: 70%;
-            .img_deploy{}
         }
     }
 

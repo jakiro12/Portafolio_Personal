@@ -13,6 +13,7 @@ const socialMediaUrls={
 }
 export default function Init(){
     const[showModalInfo,setShowModalInfo]=useState(false)
+    const[deployRequestData,setDeployRequestData]=useState('')
     const VisitMyMedias=(e)=>{
         window.open(e,'_blank')
     }
@@ -41,8 +42,8 @@ export default function Init(){
         getTitleDev.style.transition='all 3s'     
     })
     return(
-        <Container>    
-            {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)}/>}   
+        <Container >    
+            {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)} deployResizeChosen={deployRequestData}/>}   
             <nav>
                 <li onClick={()=>scrollWebsite(about)}>About</li>
                 <li onClick={()=>scrollWebsite(test)}>Skills</li>
@@ -62,7 +63,7 @@ export default function Init(){
             <MySkils/>
           </section>
           <section className='deploys_made_it' ref={deploys}>
-            <MyLastestDeploys openDetails={()=>setShowModalInfo(true)}/>
+            <MyLastestDeploys openDetails={()=>setShowModalInfo(true)} projectChosen={setDeployRequestData}/>
           </section>
           <footer className='all_about'>
             <p>Mis redes de contacto</p>
