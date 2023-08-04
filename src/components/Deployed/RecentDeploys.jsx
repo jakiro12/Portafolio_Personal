@@ -76,7 +76,9 @@ const BoxDeploys=styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: 65% 35% ;
         cursor: sw-resize;
-        .img_deploy{
+        
+    }
+    .img_deploy{
             width: 80%;
             object-fit: cover;
             height: 100%;
@@ -84,7 +86,6 @@ const BoxDeploys=styled.div`
             border: 2px groove #bde552;
             border-radius: 5px;
         }
-    }
     .about_this_deploy{
         padding: 1%;
         width: 80%;
