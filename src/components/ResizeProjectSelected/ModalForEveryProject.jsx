@@ -4,7 +4,12 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     let disney =require('../../images/disney.jpg')
     let tres=require('../../images/cartags.jpg')
     let cuatro=require('../../images/notfound.png')
-    let infoRio=['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs']
+    const techOfEachProject=[
+        ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs'],
+        ['HTML','CSS','ReactJS','NextJs','ContexApi'],
+        ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs'],
+        ['HTML','CSS','ReactJS','NextJs','ContexApi'],
+    ]
     return(
         <Modal>
            <article>
@@ -19,13 +24,14 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
            </main>
            <footer>
             <h4>Tecnologias utilizadas:</h4>
-            <div>
+            <div className="techs">
                 {
-                    infoRio.map((e,i)=>(
+                    techOfEachProject[deployResizeChosen - 1].map((e,i)=>(
                         <p key={i}>{e}</p>
                     ))
                 }
             </div>
+            <button>Ver</button>
            </footer>
            </article>
         </Modal>
@@ -86,17 +92,38 @@ const Modal=styled.div`
         }
         footer{
             width: 90%;
-            height: 95%;
+            height: 100%;
             margin: auto;
             outline: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 15% 65% 20% ;
         }
         .img_deploy{
             width: 100%;
-            object-fit: cover;
+            object-fit: fill;
             height: 100%;
+        }
+        .techs{
+            width: 100%;
+            height: 100%;
+            outline: 1px solid green;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(5,1fr);
         }
         h4{
             text-decoration: underline;
         }
-
+        button{
+            width: fit-content;
+            height: fit-content;
+            border: 2px  solid black;
+            background-color: black;
+            color: white;
+            margin: auto;
+            font-size: larger;
+            padding: 2px 2px;
+            border-radius: 5px;
+            cursor: pointer;}
 `
