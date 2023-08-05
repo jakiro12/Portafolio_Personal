@@ -52,10 +52,10 @@ const Modal=styled.div`
         align-items: center;
         article{
             width: min(400px,80%);
-            height: 75%;
+            height: min(85%,600px);
             display: grid;
             grid-template-columns:1fr;
-            grid-template-rows: 12% 53% 35%;
+            grid-template-rows: 12% 50% 38%;
             background-color: white;
             border-radius: 10px;
             box-shadow: 3px 3px 10px black;
@@ -94,7 +94,6 @@ const Modal=styled.div`
             width: 90%;
             height: 95%;
             margin: auto;
-            outline: 2px solid black;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 15% 60% 25% ;
@@ -120,17 +119,19 @@ const Modal=styled.div`
         .open_project{
             width: fit-content;
             height: fit-content;
-            border: 2px  solid black;
+            border:none;
             background-color: black;
             color: white;
             margin: auto;
             font-size: larger;
             border-radius: 5px;
             cursor: pointer;
+            padding: 3px 5px;
             }
         .tech_inside{
             width: fit-content;
             height: fit-content;
             margin: auto;
+            font-weight: bold;
         }
 `

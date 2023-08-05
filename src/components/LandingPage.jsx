@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled,{keyframes} from 'styled-components';
 import ImageWeb from './SpecialComponents/FirstImage';
 import TextAbout from './SpecialComponents/InfoAboutMe';
 import { useEffect, useRef } from 'react';
@@ -6,17 +6,10 @@ import MySkils from './StackComponents/Stack';
 import MyLastestDeploys from './Deployed/RecentDeploys';
 import { useState } from 'react';
 import ModalToSeeDetails from './ResizeProjectSelected/ModalForEveryProject';
-const socialMediaUrls={
-    linkedin:'https://www.linkedin.com/in/lautaro-carre%C3%B1o-elias-9b9248b1/',
-    github:'https://github.com/jakiro12',
-    wsp:'https://api.whatsapp.com/send?phone=5493424420130'
-}
+
 export default function Init(){
     const[showModalInfo,setShowModalInfo]=useState(false)
     const[deployRequestData,setDeployRequestData]=useState('')
-    const VisitMyMedias=(e)=>{
-        window.open(e,'_blank')
-    }
     const test=useRef(null)
     const about=useRef(null)
     const deploys=useRef(null)
@@ -66,16 +59,22 @@ export default function Init(){
             <MyLastestDeploys openDetails={()=>setShowModalInfo(true)} projectChosen={setDeployRequestData}/>
           </section>
           <footer className='all_about'>
-            <p>Mis redes de contacto</p>
-            <div className='logo_social'>
-            <button onClick={()=>VisitMyMedias(socialMediaUrls.github)}></button>
-            <button  onClick={()=>VisitMyMedias(socialMediaUrls.wsp)}></button>
-            <button onClick={()=>VisitMyMedias(socialMediaUrls.linkedin)}></button>
-            </div>
+            <button onClick={()=>scrollWebsite(about)} className='scroll_top'>&#8593;</button>
           </footer>
         </Container>
     )
 }
+const moveBtn=keyframes`
+25%{
+    transform: translateY(10px);
+}
+50%{
+    transform: translateY(-10px);
+}
+100%{
+    transform: translateY(0px);
+}
+    `
 const Container=styled.div`
     height: 300vh;
     font-size: large;
@@ -192,33 +191,23 @@ const Container=styled.div`
     .all_about{
         display: grid;
         place-items: center;
-        background-color: #50bc34;
-        .logo_social{
-            width: 40%;
-            height: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            button{
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                border: none;
-                cursor: pointer;
-                &:nth-child(1){
-                    background-image: url('https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-github-1.png');
-                     background-size: cover;
-                }
-                &:nth-child(2){
-                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png');
-                     background-size: cover;
-                }
-                &:nth-child(3){
-                    background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
-                     background-size: cover;
-                }
-            }
-        }
+        background:linear-gradient(180deg , #3eff0eba,#ffffff 65% );
+    }
+    .scroll_top{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: black;
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #0000002c;
+        background: transparent;
+        animation-name: ${moveBtn};
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        cursor: pointer;
     }
 `
 const Devname=styled.article`
