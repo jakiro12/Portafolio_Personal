@@ -55,7 +55,7 @@ const Modal=styled.div`
             height: 75%;
             display: grid;
             grid-template-columns:1fr;
-            grid-template-rows: 10% 55% 35%;
+            grid-template-rows: 12% 53% 35%;
             background-color: white;
             border-radius: 10px;
             box-shadow: 3px 3px 10px black;

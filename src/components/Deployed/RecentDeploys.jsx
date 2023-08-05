@@ -21,9 +21,10 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
     }
     return(
         <BoxDeploys>
-           
             <div className="card_description" onClick={()=>handleProjectSelected(1)}>
+            <section className='img_container'>
                 <img className='img_deploy' src={require('../../images/rio-muestra.jpg')} alt="img logo" />
+                </section>
                 <div className='about_this_deploy'>
                     <p>
                         Aplicacion Web adaptada a moviles para reservar viajes y excursiones en la terminal fluvial 
@@ -33,7 +34,9 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 
             </div>
             <div className="card_description" onClick={()=>handleProjectSelected(2)}>
+            <section className='img_container'>
                     <img className='img_deploy' src={require('../../images/disney.jpg')} alt="img logo" />
+                </section>
                 <div className='about_this_deploy'>
                     <p>
                        Clon de disney plus basico con auth de firebase, solo visual
@@ -42,7 +45,9 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
             </div>
 
             <div className="card_description" onClick={()=>handleProjectSelected(3)}>
+              <section className='img_container'>
                 <img className='img_deploy' src={require('../../images/cartags.jpg')} alt="img logo" />
+              </section>
                 <div className='about_this_deploy'>
                     <p>
                        Aplicacion Web para crear diseños de tarjetas de usuario unicos, totalmente editable 
@@ -51,7 +56,9 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 </div>
             </div>
             <div className="card_description" onClick={()=>handleProjectSelected(4)}>
-                <img className='img_deploy' src={require('../../images/notfound.png')} alt="img logo" />
+            <section className='img_container'>
+                <img className='img_deploy' src={require('../../images/skatepark.jpg')} alt="img logo" />
+                </section>
                 <div className='about_this_deploy'>
                     <p>
                     Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais
@@ -69,20 +76,26 @@ const BoxDeploys=styled.div`
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
     .card_description{
-        width: 70%;
+        width: min(300px,70%);
         height: 90%;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 65% 35% ;
         cursor: sw-resize;
-        
+    }
+    .img_container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .img_deploy{
             width: 80%;
-            object-fit: cover;
+            object-fit: fill;
             height: 100%;
-            margin-inline: auto;
             border: 2px groove #bde552;
             border-radius: 5px;
         }
