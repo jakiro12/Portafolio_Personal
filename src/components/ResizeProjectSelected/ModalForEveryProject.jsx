@@ -3,24 +3,24 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     let rio=require('../../images/rio-muestra.jpg')
     let disney =require('../../images/disney.jpg')
     let tres=require('../../images/cartags.jpg')
-    let cuatro=require('../../images/skate.jpeg')
+    let skApp=require('../../images/skate.jpeg')
     const techOfEachProject=[
         ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs'],
         ['HTML','CSS','ReactJS','NextJs','ContexApi'],
         ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs'],
-        ['HTML','CSS','ReactJS','NextJs','ContexApi'],
+        ['React-Native','Expo','RN-Navigation'],
     ]
     return(
         <Modal>
            <article>
            <header>
             <h3>
-                {deployResizeChosen === 1 ? 'Rio' : deployResizeChosen === 2 ? 'disney' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'nada' : undefined}
+                {deployResizeChosen === 1 ? 'Rio' : deployResizeChosen === 2 ? 'disney' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'SkatePark Finder App' : undefined}
             </h3>
             <button onClick={closeModal} className="close_modal">X</button>
            </header>
            <main>
-            <img className='img_deploy' src={deployResizeChosen === 1 ? rio : deployResizeChosen === 2 ? disney : deployResizeChosen === 3 ? tres : cuatro} alt="holaa"/>
+            <img className='img_deploy' src={deployResizeChosen === 1 ? rio : deployResizeChosen === 2 ? disney : deployResizeChosen === 3 ? tres : skApp} alt="holaa"/>
            </main>
            <footer>
             <h4>Tecnologias utilizadas:</h4>

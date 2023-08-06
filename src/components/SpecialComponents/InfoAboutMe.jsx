@@ -14,7 +14,7 @@ export default function TextAbout(){
 }
 const Container=styled.div`
     width: min(90%,400px);
-    height: 200px;
+    height: min(200px,100%);
     display: grid;
     margin-inline: auto;
     font-size: large;
@@ -27,7 +27,6 @@ const Container=styled.div`
     border-image-source: radial-gradient(circle at top left, #50bc34, transparent 50%);
     border-radius: 10px;
     @media screen and (max-width:847px) {
-        width: 45%;
         margin-inline: auto;
         overflow-y: scroll;
     }
