@@ -1,14 +1,23 @@
 import styled from "styled-components";
 export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
+    const allUrlDeploys={
+        disney:'https://deploy-disney.vercel.app/home',
+        cartags:'https://cartags.netlify.app/',
+        rio:'https://sos-rio-rosario-app-8s7a.vercel.app/',
+        skateApp:'https://www.mediafire.com/file/irumwnvkd9ncj24/bikeParksApp.apk/file',      
+    }
+    const LinkTo=(e)=>{
+        window.open(e,'_blank')
+    }
     let rio=require('../../images/rio-muestra.jpg')
     let disney =require('../../images/disney.jpg')
     let tres=require('../../images/cartags.jpg')
     let skApp=require('../../images/skate.jpeg')
     const techOfEachProject=[
-        ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs'],
-        ['HTML','CSS','ReactJS','NextJs','ContexApi'],
-        ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs'],
-        ['React-Native','Expo','RN-Navigation'],
+        ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs','MySQL'],
+        ['HTML','CSS','ReactJS','NextJs','Redux','Firebase'],
+        ['ReactJs','StyledComponents','CSS','HTML','ContexApi'],
+        ['React-Native','Expo','RN-Navigation','React-Hooks'],
     ]
     return(
         <Modal>
@@ -64,9 +73,9 @@ const Modal=styled.div`
             width: 90%;
             height: 100%;
             margin-inline: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 85% 15%;
+            grid-template-rows: 1fr;
             .close_modal{
                 width: fit-content;
                 height: fit-content;
@@ -77,12 +86,14 @@ const Modal=styled.div`
                 background-color: transparent;
                 border-radius: 5px;
                 cursor: pointer;
+                margin: auto;
             }
             & > h3{
-                width: 60%;
-                height: fit-content;
+                width: 100%;
+                height: 100%;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
+                align-items: center;
             }
         }
         main{

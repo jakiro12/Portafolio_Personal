@@ -1,20 +1,8 @@
 import styled from 'styled-components';
-const allUrlDeploys={
-    disney:'https://deploy-disney.vercel.app/home',
-    cartags:'https://cartags.netlify.app/',
-    rio:'https://sos-rio-rosario-app-8s7a.vercel.app/',
-    skate:'https://lnkd.in/dXaT9v-P',
-    repo_disney:'https://github.com/jakiro12/disney-plus-clone',
-    repo_rio:'https://github.com/jakiro12/sos-rio-rosarioApp',
-    repo_app:'https://github.com/jakiro12/skateparkapp',
-    repo_cartags:'https://github.com/sonmyd/Alkemy-Project'
 
-}
 
 export default function MyLastestDeploys({openDetails,projectChosen}){
-    const LinkTo=(e)=>{
-        window.open(e,'_blank')
-    }
+    
     const handleProjectSelected=(number)=>{
         openDetails()
         projectChosen(number)
@@ -76,8 +64,8 @@ const BoxDeploys=styled.div`
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
     .card_description{
-        width: min(300px,70%);
-        height: 90%;
+        width: min(330px,75%);
+        height: 95%;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr;

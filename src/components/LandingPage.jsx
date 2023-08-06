@@ -158,7 +158,7 @@ const Container=styled.div`
     .more_info{
         margin-inline:auto ;
         display: flex;
-        width: 60%;
+        width: 80%;
         height: auto;
         justify-content: space-around;
         align-items: center;
