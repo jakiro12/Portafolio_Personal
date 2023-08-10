@@ -1,11 +1,12 @@
 import styled from "styled-components";
 export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
-    const allUrlDeploys={
-        disney:'https://deploy-disney.vercel.app/home',
-        cartags:'https://cartags.netlify.app/',
-        rio:'https://sos-rio-rosario-app-8s7a.vercel.app/',
-        skateApp:'https://www.mediafire.com/file/irumwnvkd9ncj24/bikeParksApp.apk/file',      
-    }
+    const allUrlDeploys=[
+        'https://www.mediafire.com/file/irumwnvkd9ncj24/bikeParksApp.apk/file',      
+        'https://deploy-disney.vercel.app/home',
+         'https://cartags.netlify.app/',
+        'https://sos-rio-rosario-app-8s7a.vercel.app/',
+    ]
+    
     const LinkTo=(e)=>{
         window.open(e,'_blank')
     }
@@ -14,22 +15,22 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     let tres=require('../../images/cartags.jpg')
     let skApp=require('../../images/skate.jpeg')
     const techOfEachProject=[
+        ['React-Native','Expo','RN-Navigation','React-Hooks'],
         ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs','MySQL'],
         ['HTML','CSS','ReactJS','NextJs','Redux','Firebase'],
         ['ReactJs','StyledComponents','CSS','HTML','ContexApi'],
-        ['React-Native','Expo','RN-Navigation','React-Hooks'],
     ]
     return(
         <Modal>
            <article>
            <header>
             <h3>
-                {deployResizeChosen === 1 ? 'Rio' : deployResizeChosen === 2 ? 'disney' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'SkatePark Finder App' : undefined}
+                {deployResizeChosen === 1 ? 'Skate Park App' : deployResizeChosen === 2 ? 'disney' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'Rio' : undefined}
             </h3>
             <button onClick={closeModal} className="close_modal">X</button>
            </header>
            <main>
-            <img className='img_deploy' src={deployResizeChosen === 1 ? rio : deployResizeChosen === 2 ? disney : deployResizeChosen === 3 ? tres : skApp} alt="holaa"/>
+            <img className='img_deploy' src={deployResizeChosen === 1 ? skApp : deployResizeChosen === 2 ? disney : deployResizeChosen === 3 ? tres : rio} alt="holaa"/>
            </main>
            <footer>
             <h4>Tecnologias utilizadas:</h4>
@@ -40,7 +41,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
                     ))
                 }
             </div>
-            <button className="open_project">Ver</button>
+            <button className="open_project" onClick={()=>LinkTo(allUrlDeploys[deployResizeChosen-1])}>Ver / Descargar</button>
            </footer>
            </article>
         </Modal>

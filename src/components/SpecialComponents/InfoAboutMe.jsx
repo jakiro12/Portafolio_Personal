@@ -4,17 +4,17 @@ export default function TextAbout(){
     return(
         <Container>
             <p>
-            Desarrollo aplicaciones en React y React-Native, utilizando JavaScript como lenguaje principal.
-             Cuento con más de 1 año de experiencia y tuve la oportunidad de trabajar en grupos de desarrollo 
-             con personas de otros países y diferentes tipos de conocimientos, ya sea en lenguaje de programación
-              como ámbitos laborales.
+            Tengo un historial destacado en el desarrollo de aplicaciones
+             utilizando React y React-Native, respaldado por mi dominio del lenguaje principal, JavaScript.
+              Mi trayectoria abarca más de dos años de experiencia en este campo, durante los cuales he tenido el privilegio de colaborar en equipos de desarrollo internacionales. Estas experiencias me han permitido interactuar con profesionales de distintos países y con diversos 
+            niveles de conocimiento, abarcando tanto la programación como distintos contextos laborales.
             </p>
         </Container>
     )
 }
 const Container=styled.div`
-    width: min(90%,400px);
-    height: min(200px,100%);
+    width: min(90%,500px);
+    height: min(250px,100%);
     display: grid;
     margin-inline: auto;
     font-size: large;
@@ -26,8 +26,12 @@ const Container=styled.div`
     border-image-slice: 1;
     border-image-source: radial-gradient(circle at top left, #50bc34, transparent 50%);
     border-radius: 10px;
+    overflow: hidden;
     @media screen and (max-width:847px) {
         margin-inline: auto;
         overflow-y: scroll;
+        p{
+        font-size: 16px;
+    }
     }
 `

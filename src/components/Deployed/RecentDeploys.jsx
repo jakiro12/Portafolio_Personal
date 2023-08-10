@@ -11,12 +11,11 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
         <BoxDeploys>
             <div className="card_description" onClick={()=>handleProjectSelected(1)}>
             <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/rio-muestra.jpg')} alt="img logo" />
+                <img className='img_deploy' src={require('../../images/skatepark.jpg')} alt="app skatepark" />
                 </section>
                 <div className='about_this_deploy'>
                     <p>
-                        Aplicacion Web adaptada a moviles para reservar viajes y excursiones en la terminal fluvial 
-                        de Rosario.
+                    Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais.
                     </p>
                 </div>
                 
@@ -45,11 +44,11 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
             </div>
             <div className="card_description" onClick={()=>handleProjectSelected(4)}>
             <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/skatepark.jpg')} alt="img logo" />
+                <img className='img_deploy' src={require('../../images/rio-muestra.jpg')} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p>
-                    Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais
+                        Aplicacion Web para la ....
                     </p>
                 </div>
             </div>
