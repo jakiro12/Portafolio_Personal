@@ -14,7 +14,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 <img className='img_deploy' src={require('../../images/skatepark.jpg')} alt="app skatepark" />
                 </section>
                 <div className='about_this_deploy'>
-                    <p>
+                    <p className='first_d'>
                     Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais.
                     </p>
                 </div>
@@ -25,7 +25,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                     <img className='img_deploy' src={require('../../images/disney.jpg')} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
-                    <p>
+                    <p className='first_d2'>
                        Clon de disney plus basico con auth de firebase, solo visual
                     </p>
                 </div>
@@ -36,7 +36,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 <img className='img_deploy' src={require('../../images/cartags.jpg')} alt="img logo" />
               </section>
                 <div className='about_this_deploy'>
-                    <p>
+                    <p className='first_d3'>
                        Aplicacion Web para crear diseños de tarjetas de usuario unicos, totalmente editable 
                        desde la misma web
                     </p>
@@ -47,7 +47,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 <img className='img_deploy' src={require('../../images/rio-muestra.jpg')} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
-                    <p>
+                    <p className='first_d4'>
                         Aplicacion Web para la ....
                     </p>
                 </div>
@@ -87,7 +87,6 @@ const BoxDeploys=styled.div`
             border-radius: 5px;
         }
     .about_this_deploy{
-        padding: 1%;
         width: 80%;
         font-size: medium;
         margin-inline: auto;
@@ -98,14 +97,28 @@ const BoxDeploys=styled.div`
     @media screen and (max-width:847px){
         grid-template-columns:  repeat(auto-fit,minmax(min(150px,100%),1fr));
             grid-template-rows: 0.5fr;
-            height: 70%;
-            row-gap: 50px;
+            height: 80%;
             margin-bottom: auto;
         .card_description{
             font-size: 14px;
             width: 100%;
             height: 70%;
         }
+    }
+    @media screen and (max-width:450px){
+        .img_container{
+            height: 100px;
+        }
+        .card_description{
+            grid-template-rows: 50% 50%;
+        }
+        .first_d{
+            margin-top: 40px;
+        }
+        .first_d2{
+            margin-top: 40px;
+        }
+
     }
 
 `
