@@ -84,7 +84,6 @@ const Container=styled.div`
     grid-template-rows: 5% 25% 35% 30% 5%;
     position: relative;
     overflow-x:hidden;
-    background-color: red;
     nav{
         height: 100%;
         width: 100%;
