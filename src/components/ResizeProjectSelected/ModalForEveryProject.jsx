@@ -2,7 +2,7 @@ import styled from "styled-components";
 export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     const allUrlDeploys=[
         'https://www.mediafire.com/file/irumwnvkd9ncj24/bikeParksApp.apk/file',      
-        'https://deploy-disney.vercel.app/home',
+        'https://github.com/jakiro12/Dovere',
          'https://cartags.netlify.app/',
         'https://sos-rio-rosario-app-8s7a.vercel.app/',
     ]
@@ -11,12 +11,12 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
         window.open(e,'_blank')
     }
     let rio=require('../../images/rio-muestra.jpg')
-    let disney =require('../../images/disney.jpg')
+    let dovere =require('../../images/dovereapp.png')
     let tres=require('../../images/cartags.jpg')
     let skApp=require('../../images/skate.jpeg')
     const techOfEachProject=[
         ['React-Native','Expo','RN-Navigation','React-Hooks'],
-        ['ReactJs','StyledComponents','CSS','HTML','Redux','NodeJs','MySQL'],
+        ['React Native','Expo Go','Supabase','React Hooks','RN Navigation','Expo Camera','Expo Location','RN Maps'],
         ['HTML','CSS','ReactJS','NextJs','Redux','Firebase'],
         ['ReactJs','StyledComponents','CSS','HTML','ContexApi'],
     ]
@@ -25,12 +25,12 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
            <article>
            <header>
             <h3>
-                {deployResizeChosen === 1 ? 'Skate Park App' : deployResizeChosen === 2 ? 'disney' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'Rio' : undefined}
+                {deployResizeChosen === 1 ? 'Skate Park App' : deployResizeChosen === 2 ? 'App de Reciclaje' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'Rio' : undefined}
             </h3>
             <button onClick={closeModal} className="close_modal">X</button>
            </header>
            <main>
-            <img className='img_deploy' src={deployResizeChosen === 1 ? skApp : deployResizeChosen === 2 ? disney : deployResizeChosen === 3 ? tres : rio} alt="holaa"/>
+            <img className='img_deploy' src={deployResizeChosen === 1 ? skApp : deployResizeChosen === 2 ? dovere : deployResizeChosen === 3 ? tres : rio} alt="holaa"/>
            </main>
            <footer>
             <h4>Tecnologias utilizadas:</h4>

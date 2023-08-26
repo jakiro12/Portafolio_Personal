@@ -22,11 +22,12 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
             </div>
             <div className="card_description" onClick={()=>handleProjectSelected(2)}>
             <section className='img_container'>
-                    <img className='img_deploy' src={require('../../images/disney.jpg')} alt="img logo" />
+                    <img className='img_deploy' src={require('../../images/dovereapp.png')} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d2'>
-                       Clon de disney plus basico con auth de firebase, solo visual
+                       Aplicacion movil realizada en React Native para obtener puntos a traves de un codigo
+                       QR, cuando entregues botellas de plastico u vidrio en cualquier centro de reciclaje adherido
                     </p>
                 </div>
             </div>
@@ -113,10 +114,10 @@ const BoxDeploys=styled.div`
             grid-template-rows: 50% 50%;
         }
         .first_d{
-            margin-top: 40px;
+            margin-top: 10px;
         }
         .first_d2{
-            margin-top: 40px;
+            margin-top: 10px;
         }
 
     }
