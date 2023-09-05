@@ -13,7 +13,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     let rio=require('../../images/rio-muestra.jpg')
     let dovere =require('../../images/dovereapp.png')
     let tres=require('../../images/cartags.jpg')
-    let skApp=require('../../images/skate.jpeg')
+    let skApp=require('../../images/skatepark3.png')
     const techOfEachProject=[
         ['React-Native','Expo','RN-Navigation','React-Hooks'],
         ['React Native','Expo Go','Supabase','React Hooks','RN Navigation','Expo Camera','Expo Location','RN Maps'],

@@ -2,16 +2,16 @@ import styled,{keyframes} from 'styled-components';
 
 export default function WaterDrop({status}){
     return(
-        <WaterContent appear={status} class="container">
+        <WaterContent appear={status} className="container">
 
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
 			<div></div>
 			<div></div>
 		</div>
-		<div class="splash"></div>
-		<div class="particles">
+		<div className="splash"></div>
+		<div className="particles">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -19,29 +19,14 @@ export default function WaterDrop({status}){
 		</div>
 	</div>
 
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
 			<div></div>
 			<div></div>
 		</div>
-		<div class="splash"></div>
-		<div class="particles">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-	</div>
-
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
-			<div></div>
-			<div></div>
-		</div>
-		<div class="splash"></div>
-		<div class="particles">
+		<div className="splash"></div>
+		<div className="particles">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -49,29 +34,14 @@ export default function WaterDrop({status}){
 		</div>
 	</div>
 
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
 			<div></div>
 			<div></div>
 		</div>
-		<div class="splash"></div>
-		<div class="particles">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-	</div>
-
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
-			<div></div>
-			<div></div>
-		</div>
-		<div class="splash"></div>
-		<div class="particles">
+		<div className="splash"></div>
+		<div className="particles">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -79,29 +49,14 @@ export default function WaterDrop({status}){
 		</div>
 	</div>
 
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
 			<div></div>
 			<div></div>
 		</div>
-		<div class="splash"></div>
-		<div class="particles">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-	</div>
-
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
-			<div></div>
-			<div></div>
-		</div>
-		<div class="splash"></div>
-		<div class="particles">
+		<div className="splash"></div>
+		<div className="particles">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -109,14 +64,14 @@ export default function WaterDrop({status}){
 		</div>
 	</div>
 
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
 			<div></div>
 			<div></div>
 		</div>
-		<div class="splash"></div>
-		<div class="particles">
+		<div className="splash"></div>
+		<div className="particles">
 			<div></div>
 			<div></div>
 			<div></div>
@@ -124,14 +79,59 @@ export default function WaterDrop({status}){
 		</div>
 	</div>
 
-	<div class="rain">
-		<div class="drop"></div>
-		<div class="waves">
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
 			<div></div>
 			<div></div>
 		</div>
-		<div class="splash"></div>
-		<div class="particles">
+		<div className="splash"></div>
+		<div className="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div className="splash"></div>
+		<div className="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div className="splash"></div>
+		<div className="particles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div className="rain">
+		<div className="drop"></div>
+		<div className="waves">
+			<div></div>
+			<div></div>
+		</div>
+		<div className="splash"></div>
+		<div className="particles">
 			<div></div>
 			<div></div>
 			<div></div>

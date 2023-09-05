@@ -20,32 +20,32 @@ export default function SeeAllHtml({status}){
         <AllHtml appear={status} className='scolling'>
       <pre id="codeCard">
            {`
-             <div class='container'>
-                <header class="imageprofile">
+             <div className='container'>
+                <header className="imageprofile">
                     <img src='' alt=''/>
                 </header>
                 <footer >
-                    <div class="positions">
-                    <div class="description">
-                    <div class="profileinfo"> nombre</div>
-                        <hr class="verticaldiv"/>
-                    <div class="profileinfo"> apellido</div>
+                    <div className="positions">
+                    <div className="description">
+                    <div className="profileinfo"> nombre</div>
+                        <hr className="verticaldiv"/>
+                    <div className="profileinfo"> apellido</div>
                     </div>
-                    <hr class="line"/>    
-                    <div class="description">
-                    <div class="profileinfo"> nombre</div>
-                        <hr class="verticaldiv"/>
-                    <div class="profileinfo"> apellido</div>
+                    <hr className="line"/>    
+                    <div className="description">
+                    <div className="profileinfo"> nombre</div>
+                        <hr className="verticaldiv"/>
+                    <div className="profileinfo"> apellido</div>
                     </div>
-                    <hr class="line"/>
-                    <div class="description">
-                    <div class="profileinfo"> 
-                        <button class="social"></button>
-                        <button class="social"></button>
-                        <button class="social"></button>
+                    <hr className="line"/>
+                    <div className="description">
+                    <div className="profileinfo"> 
+                        <button className="social"></button>
+                        <button className="social"></button>
+                        <button className="social"></button>
                     </div>
-                        <hr class="verticaldiv"/>
-                    <div class="profileinfo"> apellido</div>
+                        <hr className="verticaldiv"/>
+                    <div className="profileinfo"> apellido</div>
                     </div>
                     </div>
                 </footer>
