@@ -11,7 +11,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
         window.open(e,'_blank')
     }
     let rio=require('../../images/rio-muestra.jpg')
-    let dovere =require('../../images/dovereapp.png')
+    let dovere =require('../../images/dovereapp1.png')
     let tres=require('../../images/cartags.jpg')
     let skApp=require('../../images/skatepark3.png')
     const techOfEachProject=[

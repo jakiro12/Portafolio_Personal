@@ -3,12 +3,8 @@ import styled from 'styled-components';
 
 
 export default function MyLastestDeploys({openDetails,projectChosen}){
-    let dovereAppImages='dovereapp'
-
-    
-   
-    const imgEndPath = ['skatepark1','skatepark2', 'skatepark3'];
     const [currentIndex, setCurrentIndex] = useState(0);
+    const imgEndPath = ['1','2', '3'];
   
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -16,7 +12,6 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
             (prevIndex + 1) % imgEndPath.length
         );
       }, 2000);
-  
       return () => clearInterval(intervalId);
     }); 
   
@@ -28,8 +23,8 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
     return(
         <BoxDeploys>
             <div className="card_description" onClick={()=>handleProjectSelected(1)}>
-            <section className='img_container'>
-                <img className='img_deploy' src={require(`../../images/${currentImage}.png`)} alt="app skatepark" />
+            <section className='img_container'   >
+                <img className='img_deploy' src={require(`../../images/skatepark${currentImage}.png`)} alt="app skatepark" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
@@ -40,7 +35,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
             </div>
             <div className="card_description" onClick={()=>handleProjectSelected(2)}>
             <section className='img_container'>
-                    <img className='img_deploy' src={require(`../../images/${dovereAppImages}.png`)} alt="img logo" />
+                    <img className='img_deploy' src={require(`../../images/dovereapp${currentImage}.png`)} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d2'>
@@ -104,7 +99,7 @@ const BoxDeploys=styled.div`
             height: 100%;
             border: 2px groove #bde552;
             border-radius: 5px;
-        }
+        } 
     .about_this_deploy{
         width: 80%;
         font-size: medium;
