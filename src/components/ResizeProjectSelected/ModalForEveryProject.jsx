@@ -4,7 +4,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
         'https://www.mediafire.com/file/irumwnvkd9ncj24/bikeParksApp.apk/file',      
         'https://github.com/jakiro12/Dovere',
          'https://cartags.netlify.app/',
-        'https://sos-rio-rosario-app-8s7a.vercel.app/',
+        'https://fluvialesapp.vercel.app/',
     ]
     
     const LinkTo=(e)=>{
@@ -18,7 +18,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
         ['React-Native','Expo','RN-Navigation','React-Hooks'],
         ['React Native','Expo Go','Supabase','React Hooks','RN Navigation','Expo Camera','Expo Location','RN Maps'],
         ['HTML','CSS','ReactJS','NextJs','Redux','Firebase'],
-        ['ReactJs','StyledComponents','CSS','HTML','ContexApi'],
+        ['HTML','CSS','ReactJS','NextJs','Redux','Supabase'],
     ]
     return(
         <Modal>

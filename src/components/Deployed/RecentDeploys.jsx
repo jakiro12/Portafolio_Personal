@@ -62,7 +62,8 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d4'>
-                        Aplicacion Web para la ....
+                        Aplicacion Web en desarrollo para gestionar los viajes en bote desde la terminal
+                        fluvial de Rosario hacia los paradores en las islas vecinas, solo frontend por el momento.
                     </p>
                 </div>
             </div>
