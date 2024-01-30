@@ -109,13 +109,14 @@ const InfoSkills=styled.article`
         margin-left: 10%;
         position: relative;
         font-size: x-large;
+        font-weight: 600;
         &::before{
             content: '';
             position: absolute;
             left: 0;
             bottom: -10%;
             height: 20%;
-            background-color: #000000;
+            background-color: #3eff0eba;
             width: 100%;
         }
     }

@@ -26,8 +26,8 @@ export default function Init(){
         let shadow=''
         let shadow2=''
          for (let index = 0; index < 8; index++) {
-           shadow += (shadow ? ',': '')+ index*1+'px '+ index*1 + 'px 0 #a5a5a5'
-            shadow2+=(shadow2 ? ',' :'') +index*1+ 'px ' +index*1 + 'px 0 #a5a5a5'
+           shadow += (shadow ? ',': '')+ index*1+'px '+ index*1 + 'px 0 #ba2c54bb'
+            shadow2+=(shadow2 ? ',' :'') +index*1+ 'px ' +index*1 + 'px 0 #ba2c54bb'
         } 
         getTitleName.style.textShadow=shadow;
         getTitleName.style.transition='all 3s'
@@ -84,10 +84,11 @@ const Container=styled.div`
     grid-template-rows: 5% 25% 35% 30% 5%;
     position: relative;
     overflow-x:hidden;
+    background-color: #0e5e91;
     nav{
         height: 100%;
         width: 100%;
-        background: linear-gradient(180deg , #ffffff 65%,#3eff0eba );
+        background: linear-gradient(180deg , transparent 75%,#3eff0e7f );
         margin: auto;
         display: flex;
         justify-content: space-around;
@@ -99,6 +100,7 @@ const Container=styled.div`
             position: relative;
             font-weight: 600;
             transition: all 0.7s;
+            font-size: 18px;
             &::after{
                 content: '';
                 position: absolute;
@@ -177,7 +179,7 @@ const Container=styled.div`
     .all_about{
         display: grid;
         place-items: center;
-        background:linear-gradient(180deg , #3eff0eba,#ffffff 65% );
+        background:transparent;
     }
     .scroll_top{
         width: 50px;
@@ -188,7 +190,7 @@ const Container=styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #0000002c;
+        border: 2px solid #3eff0eba;
         background: transparent;
         animation-name: ${moveBtn};
         animation-duration: 3s;

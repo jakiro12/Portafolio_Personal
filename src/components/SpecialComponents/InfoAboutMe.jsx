@@ -27,6 +27,10 @@ const Container=styled.div`
     border-image-source: radial-gradient(circle at top left, #50bc34, transparent 50%);
     border-radius: 10px;
     overflow: hidden;
+        p{
+            font-weight: 600;
+            font-size: 19px;
+        }
     @media screen and (max-width:847px) {
         margin-inline: auto;
         overflow-y: scroll;
