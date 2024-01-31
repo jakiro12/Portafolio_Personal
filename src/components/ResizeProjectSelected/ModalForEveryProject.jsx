@@ -41,7 +41,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
                     ))
                 }
             </div>
-            <button className="open_project" onClick={()=>LinkTo(allUrlDeploys[deployResizeChosen-1])}>Ver / Descargar</button>
+            <button className="open_project" onClick={()=>LinkTo(allUrlDeploys[deployResizeChosen-1])}>Ver - Descargar</button>
            </footer>
            </article>
         </Modal>
@@ -66,7 +66,7 @@ const Modal=styled.div`
             display: grid;
             grid-template-columns:1fr;
             grid-template-rows: 12% 50% 38%;
-            background-color: white;
+            background-color: #0e5e91;
             border-radius: 10px;
             box-shadow: 3px 3px 10px black;
         }
@@ -80,21 +80,24 @@ const Modal=styled.div`
             .close_modal{
                 width: fit-content;
                 height: fit-content;
-                padding: 4px 7px 4px 7px;
+                padding: 4px 8px;
                 font-weight: bold;
                 font-size: larger;
                 border: none;
-                background-color: transparent;
+                color: white;
                 border-radius: 5px;
-                cursor: pointer;
+                background-color: black;
+                border-radius: 5px;
                 margin: auto;
+                cursor: pointer;
             }
             & > h3{
                 width: 100%;
                 height: 100%;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
+                text-indent: 10px;
             }
         }
         main{

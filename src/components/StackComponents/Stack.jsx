@@ -158,7 +158,6 @@ const InfoSkills=styled.article`
                 height: 90%;
                 display: flex;
                 justify-content: center;
-               // outline: 2px solid black;
                 img{
                         width: 100%;
                         height: 100%;

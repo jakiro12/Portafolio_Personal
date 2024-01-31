@@ -26,8 +26,8 @@ export default function Init(){
         let shadow=''
         let shadow2=''
          for (let index = 0; index < 8; index++) {
-           shadow += (shadow ? ',': '')+ index*1+'px '+ index*1 + 'px 0 #ba2c54bb'
-            shadow2+=(shadow2 ? ',' :'') +index*1+ 'px ' +index*1 + 'px 0 #ba2c54bb'
+           shadow += (shadow ? ',': '')+ index*1+'px '+ index*1 + 'px 0 #ffffff'
+            shadow2+=(shadow2 ? ',' :'') +index*1+ 'px ' +index*1 + 'px 0 #ffffff'
         } 
         getTitleName.style.textShadow=shadow;
         getTitleName.style.transition='all 3s'
@@ -88,7 +88,7 @@ const Container=styled.div`
     nav{
         height: 100%;
         width: 100%;
-        background: linear-gradient(180deg , transparent 75%,#3eff0e7f );
+        border-bottom:2px solid #3eff0e7f;
         margin: auto;
         display: flex;
         justify-content: space-around;
