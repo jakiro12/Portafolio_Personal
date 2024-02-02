@@ -58,7 +58,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
             </div>
             <div className="card_description" onClick={()=>handleProjectSelected(4)}>
             <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/rio-muestra.png')} alt="img logo" />
+                <img className='img_deploy' src={require('../../images/fluviales.png')} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d4'>

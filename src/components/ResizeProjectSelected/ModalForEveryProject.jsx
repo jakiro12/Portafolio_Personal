@@ -10,7 +10,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     const LinkTo=(e)=>{
         window.open(e,'_blank')
     }
-    let rio=require('../../images/rio-muestra.png')
+    let rio=require('../../images/fluviales.png')
     let dovere =require('../../images/dovereapp1.png')
     let tres=require('../../images/cartags.jpg')
     let skApp=require('../../images/skatepark3.png')
