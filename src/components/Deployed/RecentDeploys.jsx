@@ -47,12 +47,12 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
 
             <div className="card_description" onClick={()=>handleProjectSelected(3)}>
               <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/cartags.jpg')} alt="img logo" />
+                <img className='img_deploy' src={require('../../images/game_balls.jpg')} alt="img logo" />
               </section>
                 <div className='about_this_deploy'>
                     <p className='first_d3'>
-                       Aplicacion Web para crear diseños de tarjetas de usuario unicos, totalmente editable 
-                       desde la misma web
+                       Juego Web para enseñar la rueda cromatica de colores, eligiendo el color correcto por cada nivel;
+                       solo para pantallas de escritorio (aun en desarrollo).
                     </p>
                 </div>
             </div>

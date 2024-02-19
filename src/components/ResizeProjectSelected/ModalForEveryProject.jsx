@@ -3,7 +3,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     const allUrlDeploys=[
         'https://www.mediafire.com/file/irumwnvkd9ncj24/bikeParksApp.apk/file',      
         'https://github.com/jakiro12/Dovere',
-         'https://cartags.netlify.app/',
+         'https://colors-game-murex.vercel.app/',
         'https://fluvialesapp.vercel.app/',
     ]
     
@@ -12,7 +12,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     }
     let rio=require('../../images/fluviales.png')
     let dovere =require('../../images/dovereapp1.png')
-    let tres=require('../../images/cartags.jpg')
+    let tres=require('../../images/game_balls.jpg')
     let skApp=require('../../images/skatepark3.png')
     const techOfEachProject=[
         ['React-Native','Expo','RN-Navigation','React-Hooks'],
