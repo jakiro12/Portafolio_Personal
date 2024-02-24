@@ -25,7 +25,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
            <article>
            <header>
             <h3>
-                {deployResizeChosen === 1 ? 'Skate Park App' : deployResizeChosen === 2 ? 'App de Reciclaje' : deployResizeChosen === 3 ? 'morty' : deployResizeChosen ? 'Rio' : undefined}
+                {deployResizeChosen === 1 ? 'Skate Park App' : deployResizeChosen === 2 ? 'Dovere App' : deployResizeChosen === 3 ? 'Ball Game Web' : deployResizeChosen ? 'Fluviales Web' : undefined}
             </h3>
             <button onClick={closeModal} className="close_modal">X</button>
            </header>
@@ -66,7 +66,7 @@ const Modal=styled.div`
             display: grid;
             grid-template-columns:1fr;
             grid-template-rows: 12% 50% 38%;
-            background-color: #0e5e91;
+            background-color:#e3e1e1;
             border-radius: 10px;
             box-shadow: 3px 3px 10px black;
         }

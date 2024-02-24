@@ -98,7 +98,7 @@ const BoxDeploys=styled.div`
             width: 80%;
             object-fit: fill;
             height: 100%;
-            border: 2px solid #4c4c4c;
+            border: 2px solid #e3e1e1;
             border-radius: 5px;
         } 
     .about_this_deploy{

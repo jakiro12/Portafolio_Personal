@@ -84,16 +84,17 @@ const Container=styled.div`
     grid-template-rows: 5% 25% 35% 30% 5%;
     position: relative;
     overflow-x:hidden;
-    background-color: #0e5e91;
+    background-color: #e6eef6;
     nav{
         height: 100%;
         width: 100%;
-        border-bottom:2px solid #3eff0e7f;
+        border-bottom:2px solid #e3e1e1;
         margin: auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
         transition: all 0.7s;
+        box-shadow: 0px 3px 10px 3px #0000004a;
         li{
             list-style-type: none;
             cursor: pointer;
