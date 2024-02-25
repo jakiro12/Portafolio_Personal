@@ -205,7 +205,7 @@ const Container=styled.div`
         grid-template-rows: 5% 25% 35% 30% 5%;
         overflow-x:hidden;
         nav{
-            height: 60%;
+            height: 100%;
             width: 100%;
         }
         .my_description{
