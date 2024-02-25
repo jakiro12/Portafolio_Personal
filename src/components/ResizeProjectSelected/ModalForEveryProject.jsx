@@ -17,7 +17,7 @@ export default function ModalToSeeDetails({closeModal,deployResizeChosen}){
     const techOfEachProject=[
         ['React-Native','Expo','RN-Navigation','React-Hooks'],
         ['React Native','Expo Go','Supabase','React Hooks','RN Navigation','Expo Camera','Expo Location','RN Maps'],
-        ['HTML','CSS','ReactJS','NextJs','Redux','Firebase'],
+        ['HTML','CSS','JavaScript','PhaserJs'],
         ['HTML','CSS','ReactJS','NextJs','Redux','Supabase'],
     ]
     return(
