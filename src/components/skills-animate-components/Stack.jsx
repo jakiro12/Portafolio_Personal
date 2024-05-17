@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import AsyncAwaitAnimate from '../StackAnimations/FuncitonsAnimate';
+import AsyncAwaitAnimate from '../animate-techs/FuncitonsAnimate';
 import { useState } from 'react';
-import StatusHttpCss from '../StackAnimations/StatusCodeCss';
-import SeeAllHtml from '../StackAnimations/AllHtmlScroll';
-import StateIncrement from '../StackAnimations/ReactStateAnimation';
-import InstallPack from '../StackAnimations/NpmInstalling';
-import QueryShow from '../StackAnimations/SqlQuery';
-import BoxData from '../StackAnimations/PostgreAnimation';
-import WaterDrop from '../StackAnimations/SassAnimation';
+import StatusHttpCss from '../animate-techs/StatusCodeCss';
+import SeeAllHtml from '../animate-techs/AllHtmlScroll';
+import StateIncrement from '../animate-techs/ReactStateAnimation';
+import InstallPack from '../animate-techs/NpmInstalling';
+import QueryShow from '../animate-techs/SqlQuery';
+import BoxData from '../animate-techs/PostgreAnimation';
+import WaterDrop from '../animate-techs/SassAnimation';
 export default function MySkils(){
     const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
     const[cssAnimation,setCssAniamtion]=useState('hidden')
@@ -21,7 +21,7 @@ export default function MySkils(){
         <InfoSkills>
             <header>
                 <p className='stack_title'>
-                    Stack de trabajo
+                    Tecnologias que utilizo
                 </p>
             </header>
             <main>

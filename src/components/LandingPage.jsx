@@ -1,17 +1,20 @@
 import styled,{keyframes} from 'styled-components';
-import ImageWeb from './SpecialComponents/FirstImage';
-import TextAbout from './SpecialComponents/InfoAboutMe';
+import ImageWeb from './about-me-components/FirstImage';
+import TextAbout from './about-me-components/InfoAboutMe';
 import { useEffect, useRef } from 'react';
-import MySkils from './StackComponents/Stack';
-import MyLastestDeploys from './Deployed/RecentDeploys';
+import MySkils from './skills-animate-components/Stack';
+import MyLastestDeploys from './projects-deployed/RecentDeploys';
 import { useState } from 'react';
-import ModalToSeeDetails from './ResizeProjectSelected/ModalForEveryProject';
-
+import ModalToSeeDetails from './modal-for-every-project/ModalForEveryProject';
+import githublogo from '../images/github.png'
+import linkedin from '../images/linkedIn.png'
+import MobileMenu from './modal-menu/NavbarMenu';
 export default function Init(){
     const[showModalInfo,setShowModalInfo]=useState(false)
     const[deployRequestData,setDeployRequestData]=useState('')
+    const[showMobileMenu,setShowMobileMenu]=useState(false)
     const test=useRef(null)
-    const about=useRef(null)
+    const topPortfolio=useRef(null)
     const deploys=useRef(null)
     const scrollWebsite=(elementRef)=>{
         window.scrollTo({
@@ -37,20 +40,25 @@ export default function Init(){
     return(
         <Container >    
             {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)} deployResizeChosen={deployRequestData}/>}   
-            <nav>
-                <li onClick={()=>scrollWebsite(about)}>About</li>
-                <li onClick={()=>scrollWebsite(test)}>Skills</li>
+            {showMobileMenu && <MobileMenu closeMenu={()=>setShowMobileMenu(false)}/>}
+            <nav ref={topPortfolio}>
+                <li onClick={()=>scrollWebsite(test)}>Stack</li>
                 <li onClick={()=>scrollWebsite(deploys)}>Proyectos</li>
+                <div className='box_social_medias'>
+                    <button style={{backgroundSize:'cover'}}></button>
+                    <button style={{backgroundSize:'cover'}}></button>
+                </div>
+                <button className='menu_navbar_mobile' onClick={()=>setShowMobileMenu(true)}><hr/></button>
             </nav> 
-           <section className='my_description' ref={about}>
+           <section className='my_description' >
             <Devname>
                    <h3 className='my_name'>Soy Lautaro Carreño</h3>
                    <h3 className='my_job'>Desarrollador Frontend</h3>
             </Devname>
             <aside className='more_info'>
-                <ImageWeb/>
                 <TextAbout/>
-                </aside>
+                <ImageWeb/>
+            </aside>
            </section>
           <section className='proyect_made_it' ref={test}>
             <MySkils/>
@@ -59,7 +67,7 @@ export default function Init(){
             <MyLastestDeploys openDetails={()=>setShowModalInfo(true)} projectChosen={setDeployRequestData}/>
           </section>
           <footer className='all_about'>
-            <button onClick={()=>scrollWebsite(about)} className='scroll_top'>&#8593;</button>
+            <button onClick={()=>scrollWebsite(topPortfolio)} className='scroll_top'>&#8593;</button>
           </footer>
         </Container>
     )
@@ -109,7 +117,6 @@ const Container=styled.div`
                 height: auto;
                 left: 0;
                 bottom: -10%;
-                border-bottom: 1px solid black;
             }
             &:hover::after{
                 transition: all 0.7s;
@@ -120,7 +127,30 @@ const Container=styled.div`
             transform: scale(1.05);
         }
     }
-   
+    .menu_navbar_mobile{
+        display: none;
+    }
+    .box_social_medias{
+        width: 15%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 1px 1px 3px 3px #0000005f;
+        }
+        button:nth-child(1){
+            background: url(${githublogo});
+        }
+        button:nth-child(2){
+            background: url(${linkedin});
+        }
+    }
  
     .my_description{
         display: grid;
@@ -204,13 +234,37 @@ const Container=styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: 5% 25% 35% 30% 5%;
         overflow-x:hidden;
+        .menu_navbar_mobile{
+            display: block;
+            margin-right: 5%;
+            border-left: none;
+            border-right:none;
+            border-radius: none;
+            background: transparent;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            hr{
+                height: 2px;
+                outline: none;
+                border: none;
+                background-color: #000000;
+            }
+        }
         nav{
             height: 100%;
             width: 100%;
+            justify-content: flex-end;
+            li{
+                display: none;
+            }
         }
         .my_description{
             width: 100%;
             grid-template-rows: 25% 75%;
+        }
+        .box_social_medias{
+            display: none;
         }
          .more_info{
                 width: 100%;

@@ -18,17 +18,15 @@ const Container=styled.div`
     display: grid;
     margin-inline: auto;
     font-size: large;
-    font-weight: 300;
     padding: 5px;
     box-shadow: 7px 7px rgba(77, 65, 65, 0.3);
     border-inline-start: 5px solid;
     border-block-start: 5px solid;
     border-image-slice: 1;
-    border-image-source: radial-gradient(circle at top left, #50bc34, transparent 50%);
+    border-image-source: radial-gradient(circle at top left, #50bc34 , transparent 60%);
     border-radius: 10px;
     overflow: hidden;
         p{
-            font-weight: 600;
             font-size: 19px;
         }
     @media screen and (max-width:847px) {
