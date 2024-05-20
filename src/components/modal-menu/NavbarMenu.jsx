@@ -1,7 +1,11 @@
 import styled from "styled-components";
-export default function MobileMenu({closeMenu}){
+export default function MobileMenu({closeMenu,onScrollStack,onScrollProyects}){
     const handleOpenMedias=(urlMedia)=>{
         window.open(urlMedia,'_blank')
+        closeMenu()
+    }
+    const handleScrollView=(webSection)=>{
+        webSection()
         closeMenu()
     }
     return(
@@ -10,8 +14,12 @@ export default function MobileMenu({closeMenu}){
                 <li style={{alignSelf:'flex-end',marginRight:'5%'}}
                     onClick={closeMenu}
                 >X</li>
-                <li>Skills</li>
-                <li>Proyectos</li>
+                <li 
+                    onClick={()=>handleScrollView(onScrollStack)}
+                >Stack</li>
+                <li
+                    onClick={()=>handleScrollView(onScrollProyects)}
+                >Proyectos</li>
                 <li 
                     onClick={()=>handleOpenMedias('https://github.com/jakiro12')}
                 >GitHub</li>
