@@ -1,6 +1,7 @@
 import { useEffect,useState } from 'react';
 import styled from 'styled-components';
-
+import githublogo from '../../images/github.png'
+import linkedin from '../../images/linkedIn.png'
 
 export default function MyLastestDeploys({openDetails,projectChosen}){
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +23,7 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
     }
     return(
         <BoxDeploys>
-            <div className="card_description" onClick={()=>handleProjectSelected(1)}>
+            <div className="card_description" >
             <section className='img_container'   >
                 <img className='img_deploy' src={require(`../../images/skatepark${currentImage}.png`)} alt="app skatepark" />
                 </section>
@@ -30,10 +31,14 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                     <p className='first_d'>
                     Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais.
                     </p>
+                    <div className='box_social_medias_deploy'>
+                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}></button>
+                    </div>
                 </div>
                 
             </div>
-            <div className="card_description" onClick={()=>handleProjectSelected(2)}>
+            <div className="card_description" >
             <section className='img_container'>
                     <img className='img_deploy' src={require(`../../images/dovereapp${currentImage}.png`)} alt="img logo" />
                 </section>
@@ -42,10 +47,14 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                        Aplicacion movil realizada en React Native para obtener puntos a traves de un codigo
                        QR, cuando entregues botellas de plastico u vidrio en cualquier centro de reciclaje adherido
                     </p>
+                    <div className='box_social_medias_deploy'>
+                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}></button>
+                    </div>
                 </div>
             </div>
 
-            <div className="card_description" onClick={()=>handleProjectSelected(3)}>
+            <div className="card_description" >
               <section className='img_container'>
                 <img className='img_deploy' src={require('../../images/game_balls.jpg')} alt="img logo" />
               </section>
@@ -54,9 +63,13 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                        Juego Web para enseñar la rueda cromatica de colores, eligiendo el color correcto por cada nivel;
                        solo para pantallas de escritorio (aun en desarrollo).
                     </p>
+                    <div className='box_social_medias_deploy'>
+                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}></button>
+                    </div>
                 </div>
             </div>
-            <div className="card_description" onClick={()=>handleProjectSelected(4)}>
+            <div className="card_description" >
             <section className='img_container'>
                 <img className='img_deploy' src={require('../../images/fluviales.png')} alt="img logo" />
                 </section>
@@ -65,6 +78,10 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                         Aplicacion Web en desarrollo para gestionar los viajes en bote desde la terminal
                         fluvial de Rosario hacia los paradores en las islas vecinas, solo frontend por el momento.
                     </p>
+                    <div className='box_social_medias_deploy'>
+                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}></button>
+                    </div>
                 </div>
             </div>
             </BoxDeploys>
@@ -72,26 +89,30 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
 }
 
 const BoxDeploys=styled.div`
-    width: 90%;
+    width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     .card_description{
-        width: min(330px,75%);
-        height: 95%;
+        width: min(700px,75%);
+        height: 200px;
         margin: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 65% 35% ;
-        cursor: sw-resize;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color:  #D6DBDD ;
+        box-shadow: 0px 6px 5px #00000055;
+        border-radius: 10px;
+        overflow: hidden;
     }
     .img_container{
         width: 100%;
         height: 100%;
         overflow: hidden;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
     .img_deploy{
@@ -103,11 +124,34 @@ const BoxDeploys=styled.div`
         } 
     .about_this_deploy{
         width: 80%;
+        height: 90%;
         font-size: medium;
         margin-inline: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .box_social_medias_deploy{
+        width: 45%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        button:nth-child(1){
+            background: url(${githublogo});
+        }
+        button:nth-child(2){
+            background: url(${linkedin});
+        }
     }
     @media screen and (max-width:847px){
         grid-template-columns:  repeat(auto-fit,minmax(min(150px,100%),1fr));

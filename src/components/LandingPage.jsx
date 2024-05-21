@@ -91,12 +91,12 @@ const moveBtn=keyframes`
 }
     `
 const Container=styled.div`
-    height: 300vh;
+    height: 400vh;
     font-size: large;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5% 25% 35% 30% 5%;
+    grid-template-rows: 5% 25% 30% 35% 5%;
     position: relative;
     overflow-x:hidden;
     background-color: #e6eef6;
@@ -198,7 +198,7 @@ const Container=styled.div`
     .more_info{
         margin-inline:auto ;
         display: flex;
-        width: 80%;
+        width: 95%;
         height: auto;
         justify-content: space-around;
         align-items: center;
