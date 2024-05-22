@@ -90,7 +90,7 @@ const BoxDeploys=styled.div`
     align-items: center;
     flex-direction: column;
     .card_description{
-        width: min(700px,75%);
+        width: min(700px,95%);
         height: 200px;
         margin: auto;
         display: flex;
@@ -102,22 +102,19 @@ const BoxDeploys=styled.div`
         overflow: hidden;
     }
     .img_container{
-        width: 100%;
+        width: 45%;
         height: 100%;
         overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
     .img_deploy{
-            width: 80%;
+            width: 100%;
             object-fit: fill;
             height: 100%;
             border: 2px solid #e3e1e1;
             border-radius: 5px;
         } 
     .about_this_deploy{
-        width: 80%;
+        width: 50%;
         height: 90%;
         font-size: medium;
         margin-inline: auto;
@@ -150,12 +147,11 @@ const BoxDeploys=styled.div`
     @media screen and (max-width:847px){
         grid-template-columns:  repeat(auto-fit,minmax(min(150px,100%),1fr));
             grid-template-rows: 0.5fr;
-            height: 80%;
+            height: 100%;
             margin-bottom: auto;
         .card_description{
             font-size: 14px;
-            width: 100%;
-            height: 70%;
+            height: 180px;
         }
     }
     @media screen and (max-width:450px){

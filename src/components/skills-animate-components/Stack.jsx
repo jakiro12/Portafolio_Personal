@@ -1,22 +1,7 @@
 import styled from 'styled-components';
-import AsyncAwaitAnimate from '../animate-techs/FuncitonsAnimate';
-import { useState } from 'react';
-import StatusHttpCss from '../animate-techs/StatusCodeCss';
-import SeeAllHtml from '../animate-techs/AllHtmlScroll';
-import StateIncrement from '../animate-techs/ReactStateAnimation';
-import InstallPack from '../animate-techs/NpmInstalling';
-import QueryShow from '../animate-techs/SqlQuery';
-import BoxData from '../animate-techs/PostgreAnimation';
-import WaterDrop from '../animate-techs/SassAnimation';
+
 export default function MySkils(){
-    const[javaScriptAnimation,setJavaScriptAnimation]=useState('hidden')
-    const[cssAnimation,setCssAniamtion]=useState('hidden')
-    const[htmlAnimation,setHtmlAnimation]=useState('hidden')
-    const[reactAnimation,setReactAnimation]=useState('hidden')
-    const[nodeAnimation,setNodeAnimation]=useState('hidden')
-    const[sqlAnimation,setSqlAnimation]=useState('hidden')
-    const[postgreAnimation,setPostgreAnimation]=useState('hidden')
-    const[sassAnimation,setSassAnimation]=useState('hidden')
+    
     return(
         <InfoSkills>
             <header>
@@ -25,42 +10,31 @@ export default function MySkils(){
                 </p>
             </header>
             <main>
-                <div className='stack' onMouseOver={()=>setJavaScriptAnimation('visible')} onMouseLeave={()=>setJavaScriptAnimation('hidden')}>
+                <div className='stack' >
                     <img src={require('../../images/javascript.png')} alt='logo JS'/>
                 </div>
-                <div className='stack'  onMouseOver={()=>setCssAniamtion('visible')} onMouseLeave={()=>setCssAniamtion('hidden')}>
+                <div className='stack'  >
                 <img src={require('../../images/css.png')} alt='logo CSS'/>
                 </div>
-                <div className='stack' onMouseOver={()=>setHtmlAnimation('visible')} onMouseLeave={()=>setHtmlAnimation('hidden')}>
+                <div className='stack' >
                 <img src={require('../../images/html.png')} alt='logo HTML'/>
                 </div>
-                <div className='stack' onMouseOver={()=>setReactAnimation('visible')} onMouseLeave={()=>setReactAnimation('hidden')}>
+                <div className='stack' >
                 <img src={require('../../images/react.png')} alt='logo React'/>
                 </div>
-                <div className='stack' onMouseOver={()=>setSqlAnimation('visible')} onMouseLeave={()=>setSqlAnimation('hidden')}>
+                <div className='stack' >
                 <img src={require('../../images/sql.png')} alt='logo SQL'/>
                 </div>
-                <div className='stack'  onMouseOver={()=>setPostgreAnimation('visible')} onMouseLeave={()=>setPostgreAnimation('hidden')}>
+                <div className='stack'  >
                 <img src={require('../../images/postgresql.png')} alt='logo PostgreSQL'/>
                 </div>
-                <div className='stack'onMouseOver={()=>setSassAnimation('visible')} onMouseLeave={()=>setSassAnimation('hidden')}>
+                <div className='stack'>
                 <img src={require('../../images/sass.jpg')} alt='logo Sass'/>
                 </div>
-                <div className='stack' onMouseOver={()=>setNodeAnimation('visible')} onMouseLeave={()=>setNodeAnimation('hidden')}>
+                <div className='stack' >
                 <img src={require('../../images/node.png')} alt='logo NodeJs'/>
                 </div>
-                
             </main>
-            <footer className='animations_container'>
-                <AsyncAwaitAnimate status={javaScriptAnimation}/>
-                <StatusHttpCss status={cssAnimation}/>
-                <SeeAllHtml status={htmlAnimation}/>
-                <StateIncrement status={reactAnimation}/>
-                <InstallPack status={nodeAnimation} />
-                <QueryShow status={sqlAnimation}/>
-                <BoxData status={postgreAnimation}/>
-                <WaterDrop status={sassAnimation} />
-            </footer>
         </InfoSkills>
     )
 }
@@ -70,7 +44,7 @@ const InfoSkills=styled.article`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 15% 85%;
     main{
         display: grid;
         width: 90%;
@@ -120,14 +94,7 @@ const InfoSkills=styled.article`
             width: 100%;
         }
     }
-    footer{
-        width: auto;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
+   
     @media screen and (max-width:847px){
         main{
             width: 100%;

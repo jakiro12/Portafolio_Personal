@@ -11,7 +11,6 @@ import linkedin from '../images/linkedIn.png'
 import MobileMenu from './modal-menu/NavbarMenu';
 export default function Init(){
     const[showModalInfo,setShowModalInfo]=useState(false)
-    const[deployRequestData,setDeployRequestData]=useState('')
     const[showMobileMenu,setShowMobileMenu]=useState(false)
     const test=useRef(null)
     const topPortfolio=useRef(null)
@@ -42,7 +41,7 @@ export default function Init(){
     })
     return(
         <Container >    
-            {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)} deployResizeChosen={deployRequestData}/>}   
+            {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)} />}   
             {showMobileMenu && <MobileMenu closeMenu={()=>setShowMobileMenu(false)} onScrollStack={()=>scrollWebsite(test)} onScrollProyects={()=>scrollWebsite(deploys)}/>}
             <nav ref={topPortfolio}>
                 <li onClick={()=>scrollWebsite(test)}>Stack</li>
@@ -96,7 +95,7 @@ const Container=styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5% 25% 28% 38% 4%;
+    grid-template-rows: 5% 25% 25% 41% 4%;
     position: relative;
     overflow-x:hidden;
     background-color: #e6eef6;
