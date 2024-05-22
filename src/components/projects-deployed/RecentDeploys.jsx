@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import githublogo from '../../images/github.png'
 import linkedin from '../../images/linkedIn.png'
 
-export default function MyLastestDeploys({openDetails,projectChosen}){
+export default function MyLastestDeploys(){
     const [currentIndex, setCurrentIndex] = useState(0);
     const imgEndPath = ['1','2', '3'];
   
@@ -15,28 +15,22 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
       }, 2000);
       return () => clearInterval(intervalId);
     }); 
-  
     const currentImage = imgEndPath[currentIndex];
-    const handleProjectSelected=(number)=>{
-        openDetails()
-        projectChosen(number)
-    }
     return(
         <BoxDeploys>
-            <div className="card_description" >
-            <section className='img_container'   >
-                <img className='img_deploy' src={require(`../../images/skatepark${currentImage}.png`)} alt="app skatepark" />
+          <div className="card_description" >
+            <section className='img_container'>
+                <img className='img_deploy' src={require('../../images/fluviales.png')} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
-                    Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais.
+                    En este juego, tienes que agregar colores a las esferas que rebotan por la pantalla utilizando una paleta de colores en la parte inferior. Debes tocar las esferas que coincidan con el color solicitado que se muestra en la esquina superior izquierda de la pantalla, para avanzar de nivel y completar la rueda cromatica de colores
                     </p>
                     <div className='box_social_medias_deploy'>
                         <button style={{backgroundSize:'cover'}}></button>
                         <button style={{backgroundSize:'cover'}}></button>
                     </div>
                 </div>
-                
             </div>
             <div className="card_description" >
             <section className='img_container'>
@@ -70,19 +64,19 @@ export default function MyLastestDeploys({openDetails,projectChosen}){
                 </div>
             </div>
             <div className="card_description" >
-            <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/fluviales.png')} alt="img logo" />
+            <section className='img_container'   >
+                <img className='img_deploy' src={require(`../../images/skatepark${currentImage}.png`)} alt="app skatepark" />
                 </section>
                 <div className='about_this_deploy'>
-                    <p className='first_d4'>
-                        Aplicacion Web en desarrollo para gestionar los viajes en bote desde la terminal
-                        fluvial de Rosario hacia los paradores en las islas vecinas, solo frontend por el momento.
+                    <p className='first_d'>
+                    Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais.
                     </p>
                     <div className='box_social_medias_deploy'>
                         <button style={{backgroundSize:'cover'}}></button>
                         <button style={{backgroundSize:'cover'}}></button>
                     </div>
                 </div>
+                
             </div>
             </BoxDeploys>
     )

@@ -71,7 +71,7 @@ export default function Init(){
             <MySkils/>
           </section>
           <section className='deploys_made_it' ref={deploys}>
-            <MyLastestDeploys openDetails={()=>setShowModalInfo(true)} projectChosen={setDeployRequestData}/>
+            <MyLastestDeploys />
           </section>
           <footer className='all_about'>
             <button onClick={()=>scrollWebsite(topPortfolio)} className='scroll_top'>&#8593;</button>
@@ -96,7 +96,7 @@ const Container=styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5% 25% 30% 35% 5%;
+    grid-template-rows: 5% 25% 28% 38% 4%;
     position: relative;
     overflow-x:hidden;
     background-color: #e6eef6;
