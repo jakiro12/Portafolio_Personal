@@ -238,7 +238,7 @@ const Container=styled.div`
         display: grid;
         height: 300vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 5% 25% 35% 30% 5%;
+        grid-template-rows: 5% 25% 25% 40% 5%;
         overflow-x:hidden;
         .menu_navbar_mobile{
             display: block;

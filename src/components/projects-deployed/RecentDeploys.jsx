@@ -1,7 +1,7 @@
 import { useEffect,useState } from 'react';
 import styled from 'styled-components';
 import githublogo from '../../images/github.png'
-import linkedin from '../../images/linkedIn.png'
+import internetlogo from '../../images/internetlogo.jpg'
 
 export default function MyLastestDeploys(){
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,18 +16,40 @@ export default function MyLastestDeploys(){
       return () => clearInterval(intervalId);
     }); 
     const currentImage = imgEndPath[currentIndex];
+    const handleOpenLinkCard=(urlToOpen)=>{
+        window.open(urlToOpen,'_blank')
+    }
     return(
         <BoxDeploys>
+            <div className="card_description" >
+              <section className='img_container'>
+                <img className='img_deploy' src={require('../../images/invitacion.jpg')} alt="img logo" />
+              </section>
+                <div className='about_this_deploy'>
+                    <p className='first_d3'>
+                    Invitación especial para las bodas, se pueden elegir entre ubicaciones para la ceremonia: la iglesia o el lugar de la ceremonia civil.
+                    También proporcione un enlace para descargar un PDF con todos los eventos de la boda.
+                    </p>
+                    <div className='box_social_medias_deploy'>
+                        <button style={{backgroundSize:'cover'}}
+                            onClick={()=>handleOpenLinkCard('https://mockup-greenplus.vercel.app/')}
+                        ></button>
+                        <button style={{backgroundSize:'cover'}}></button>
+                    </div>
+                </div>
+            </div>
           <div className="card_description" >
             <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/fluviales.png')} alt="img logo" />
+                <img className='img_deploy' src={require(`../../images/phaser_game${currentImage}.jpg`)} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
                     En este juego, tienes que agregar colores a las esferas que rebotan por la pantalla utilizando una paleta de colores en la parte inferior. Debes tocar las esferas que coincidan con el color solicitado que se muestra en la esquina superior izquierda de la pantalla, para avanzar de nivel y completar la rueda cromatica de colores
                     </p>
                     <div className='box_social_medias_deploy'>
-                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}
+                        onClick={()=>handleOpenLinkCard('https://colors-game-murex.vercel.app/')}
+                        ></button>
                         <button style={{backgroundSize:'cover'}}></button>
                     </div>
                 </div>
@@ -40,22 +62,6 @@ export default function MyLastestDeploys(){
                     <p className='first_d2'>
                        Aplicacion movil realizada en React Native para obtener puntos a traves de un codigo
                        QR, cuando entregues botellas de plastico u vidrio en cualquier centro de reciclaje adherido
-                    </p>
-                    <div className='box_social_medias_deploy'>
-                        <button style={{backgroundSize:'cover'}}></button>
-                        <button style={{backgroundSize:'cover'}}></button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="card_description" >
-              <section className='img_container'>
-                <img className='img_deploy' src={require('../../images/game_balls.jpg')} alt="img logo" />
-              </section>
-                <div className='about_this_deploy'>
-                    <p className='first_d3'>
-                       Juego Web para enseñar la rueda cromatica de colores, eligiendo el color correcto por cada nivel;
-                       solo para pantallas de escritorio (aun en desarrollo).
                     </p>
                     <div className='box_social_medias_deploy'>
                         <button style={{backgroundSize:'cover'}}></button>
@@ -91,7 +97,7 @@ const BoxDeploys=styled.div`
     flex-direction: column;
     .card_description{
         width: min(700px,95%);
-        height: 200px;
+        height: max(20%, 220px);
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -115,14 +121,13 @@ const BoxDeploys=styled.div`
         } 
     .about_this_deploy{
         width: 50%;
-        height: 90%;
+        height: 95%;
         font-size: medium;
         margin-inline: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin-right: 10px;
     }
     .box_social_medias_deploy{
         width: 45%;
@@ -138,20 +143,10 @@ const BoxDeploys=styled.div`
             cursor: pointer;
         }
         button:nth-child(1){
-            background: url(${githublogo});
+            background: url(${internetlogo});
         }
         button:nth-child(2){
-            background: url(${linkedin});
-        }
-    }
-    @media screen and (max-width:847px){
-        grid-template-columns:  repeat(auto-fit,minmax(min(150px,100%),1fr));
-            grid-template-rows: 0.5fr;
-            height: 100%;
-            margin-bottom: auto;
-        .card_description{
-            font-size: 14px;
-            height: 180px;
+            background: url(${githublogo});
         }
     }
     @media screen and (max-width:450px){

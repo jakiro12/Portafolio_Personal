@@ -23,16 +23,10 @@ export default function MySkils(){
                 <img src={require('../../images/react.png')} alt='logo React'/>
                 </div>
                 <div className='stack' >
-                <img src={require('../../images/sql.png')} alt='logo SQL'/>
+                    <img src={require('../../images/javascript.png')} alt='logo JS'/>
                 </div>
                 <div className='stack'  >
-                <img src={require('../../images/postgresql.png')} alt='logo PostgreSQL'/>
-                </div>
-                <div className='stack'>
-                <img src={require('../../images/sass.jpg')} alt='logo Sass'/>
-                </div>
-                <div className='stack' >
-                <img src={require('../../images/node.png')} alt='logo NodeJs'/>
+                <img src={require('../../images/css.png')} alt='logo CSS'/>
                 </div>
             </main>
         </InfoSkills>
@@ -46,15 +40,17 @@ const InfoSkills=styled.article`
     grid-template-columns: 1fr;
     grid-template-rows: 15% 85%;
     main{
-        display: grid;
+        display: flex;
         width: 90%;
         height: 100%;
         margin-inline:auto ;
-        grid-template-columns:  repeat(auto-fit,minmax(250px,1fr));
-        grid-template-rows: auto;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
         .stack{
-            width: 60%;
-            height: 80%;
+            width:100px;
+            height: 100px;
             margin: auto;
             border-radius: 10px;
             position: relative;
@@ -66,11 +62,6 @@ const InfoSkills=styled.article`
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                &:hover{
-                    transform:  rotateY(-30deg) scale(0.8) translateZ(-50px) ;
-                    box-shadow: 5px 0px 10px black;
-                    transition: all 2s;
-                }   
             }
         }
     }
@@ -90,47 +81,9 @@ const InfoSkills=styled.article`
             left: 0;
             bottom: -10%;
             height: 20%;
-            background-color: #3eff0eba;
+            background-color: #D6DBDD;
             width: 100%;
         }
     }
    
-    @media screen and (max-width:847px){
-        main{
-            width: 100%;
-            height: 80%;
-            .stack{
-                width: 50%;
-                height: 90%;
-                display: flex;
-                justify-content: center;
-                img{
-                        width: 70%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-            }
-        }
-   }
-   @media screen and (min-width: 440px) and (max-width: 620px) {
-  main{
-    grid-template-columns:  repeat(auto-fit,minmax(200px,1fr));
-  }
-}
-   @media screen and (max-width:440px){
-    main{
-        grid-template-columns:  repeat(auto-fit,minmax(150px,1fr));
-        .stack{
-                width: 50%;
-                height: 90%;
-                display: flex;
-                justify-content: center;
-                img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-            }
-    }
-   }
 `
