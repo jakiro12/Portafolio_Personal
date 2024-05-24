@@ -5,12 +5,11 @@ import { useEffect, useRef } from 'react';
 import MySkils from './skills-animate-components/Stack';
 import MyLastestDeploys from './projects-deployed/RecentDeploys';
 import { useState } from 'react';
-import ModalToSeeDetails from './modal-for-every-project/ModalForEveryProject';
 import githublogo from '../images/github.png'
 import linkedin from '../images/linkedIn.png'
 import MobileMenu from './modal-menu/NavbarMenu';
+import AnimateTechs from './animate-techs/Animate';
 export default function Init(){
-    const[showModalInfo,setShowModalInfo]=useState(false)
     const[showMobileMenu,setShowMobileMenu]=useState(false)
     const test=useRef(null)
     const topPortfolio=useRef(null)
@@ -41,7 +40,6 @@ export default function Init(){
     })
     return(
         <Container >    
-            {showModalInfo && <ModalToSeeDetails closeModal={()=>setShowModalInfo(false)} />}   
             {showMobileMenu && <MobileMenu closeMenu={()=>setShowMobileMenu(false)} onScrollStack={()=>scrollWebsite(test)} onScrollProyects={()=>scrollWebsite(deploys)}/>}
             <nav ref={topPortfolio}>
                 <li onClick={()=>scrollWebsite(test)}>Stack</li>
@@ -68,6 +66,7 @@ export default function Init(){
            </section>
           <section className='proyect_made_it' ref={test}>
             <MySkils/>
+            <AnimateTechs/>
           </section>
           <section className='deploys_made_it' ref={deploys}>
             <MyLastestDeploys />
@@ -148,7 +147,7 @@ const Container=styled.div`
             border-radius: 10px;
             border: none;
             cursor: pointer;
-            box-shadow: 1px 1px 3px 3px #0000005f;
+            box-shadow: 1px 1px 2px 2px #00000055;
         }
         button:nth-child(1){
             background: url(${githublogo});
@@ -205,6 +204,9 @@ const Container=styled.div`
     .proyect_made_it{
         width: auto;
         height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70% 30%;
     }
     .deploys_made_it{
         width: auto;

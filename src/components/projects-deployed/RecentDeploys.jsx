@@ -1,21 +1,9 @@
-import { useEffect,useState } from 'react';
 import styled from 'styled-components';
 import githublogo from '../../images/github.png'
 import internetlogo from '../../images/internetlogo.jpg'
 
 export default function MyLastestDeploys(){
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const imgEndPath = ['1','2', '3'];
-  
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        setCurrentIndex(prevIndex =>
-            (prevIndex + 1) % imgEndPath.length
-        );
-      }, 2000);
-      return () => clearInterval(intervalId);
-    }); 
-    const currentImage = imgEndPath[currentIndex];
+    
     const handleOpenLinkCard=(urlToOpen)=>{
         window.open(urlToOpen,'_blank')
     }
@@ -26,8 +14,8 @@ export default function MyLastestDeploys(){
                 <img className='img_deploy' src={require('../../images/invitacion.jpg')} alt="img logo" />
               </section>
                 <div className='about_this_deploy'>
-                    <p className='first_d3'>
-                    Invitación especial para las bodas, se pueden elegir entre ubicaciones para la ceremonia: la iglesia o el lugar de la ceremonia civil.
+                    <p className='first_d'>
+                    Invitación animada para las bodas, se pueden elegir entre ubicaciones la iglesia o el lugar de la ceremonia civil.
                     También proporcione un enlace para descargar un PDF con todos los eventos de la boda.
                     </p>
                     <div className='box_social_medias_deploy'>
@@ -40,38 +28,42 @@ export default function MyLastestDeploys(){
             </div>
           <div className="card_description" >
             <section className='img_container'>
-                <img className='img_deploy' src={require(`../../images/phaser_game${currentImage}.jpg`)} alt="img logo" />
+                <img className='img_deploy' src={require(`../../images/phaser_game1.jpg`)} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
-                    En este juego, tienes que agregar colores a las esferas que rebotan por la pantalla utilizando una paleta de colores en la parte inferior. Debes tocar las esferas que coincidan con el color solicitado que se muestra en la esquina superior izquierda de la pantalla, para avanzar de nivel y completar la rueda cromatica de colores
+                    Juego para aprender la teoria de colores. Debes agregar un color a las esferas y elegir las que coincidan con el color solicitado que se muestra en la esquina superior izquierda de la pantalla, para avanzar de nivel y completar la rueda cromatica de colores.
                     </p>
                     <div className='box_social_medias_deploy'>
                         <button style={{backgroundSize:'cover'}}
-                        onClick={()=>handleOpenLinkCard('https://colors-game-murex.vercel.app/')}
+                            onClick={()=>handleOpenLinkCard('https://colors-game-murex.vercel.app/')}
                         ></button>
-                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}
+                            onClick={()=>handleOpenLinkCard('https://github.com/jakiro12/bugs_game')}
+                        ></button>
                     </div>
                 </div>
             </div>
             <div className="card_description" >
             <section className='img_container'>
-                    <img className='img_deploy' src={require(`../../images/dovereapp${currentImage}.png`)} alt="img logo" />
+                    <img className='img_deploy' src={require(`../../images/dovereapp1.png`)} alt="img logo" />
                 </section>
                 <div className='about_this_deploy'>
-                    <p className='first_d2'>
+                    <p className='first_d'>
                        Aplicacion movil realizada en React Native para obtener puntos a traves de un codigo
                        QR, cuando entregues botellas de plastico u vidrio en cualquier centro de reciclaje adherido
                     </p>
                     <div className='box_social_medias_deploy'>
-                        <button style={{backgroundSize:'cover'}}></button>
-                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}} disabled></button>
+                        <button style={{backgroundSize:'cover'}}
+                            onClick={()=>handleOpenLinkCard('https://github.com/jakiro12/Dovere')}
+                        ></button>
                     </div>
                 </div>
             </div>
             <div className="card_description" >
             <section className='img_container'   >
-                <img className='img_deploy' src={require(`../../images/skatepark${currentImage}.png`)} alt="app skatepark" />
+                <img className='img_deploy' src={require(`../../images/skatepark1.png`)} alt="app skatepark" />
                 </section>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
@@ -122,15 +114,17 @@ const BoxDeploys=styled.div`
     .about_this_deploy{
         width: 50%;
         height: 95%;
-        font-size: medium;
-        margin-inline: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        p{
+            font-size: 16px;
+            font-weight: bolder;
+        }
     }
     .box_social_medias_deploy{
-        width: 45%;
+        width: 60%;
         height: fit-content;
         display: flex;
         justify-content: space-around;
@@ -153,16 +147,6 @@ const BoxDeploys=styled.div`
         .img_container{
             height: 100px;
         }
-        .card_description{
-            grid-template-rows: 50% 50%;
-        }
-        .first_d{
-            margin-top: 10px;
-        }
-        .first_d2{
-            margin-top: 10px;
-        }
-
     }
 
 `
