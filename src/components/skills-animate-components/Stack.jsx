@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import react_logo from '../../images/React.svg'
+import html_logo from '../../images/HTML5.svg'
+import javascript_logo from '../../images/JavaScript.svg'
+import css_logo from '../../images/CSS3.svg'
+import typescript_logo from '../../images/TypeScript.svg'
+import next_logo from '../../images/Next.js.svg'
+
 
 export default function MySkils(){
     
@@ -11,22 +18,22 @@ export default function MySkils(){
             </header>
             <main>
                 <div className='stack' >
-                    <img src={require('../../images/javascript.png')} alt='logo JS'/>
+                    <img src={javascript_logo} alt='logo JS'/>
                 </div>
                 <div className='stack'  >
-                <img src={require('../../images/css.png')} alt='logo CSS'/>
+                <img src={css_logo} alt='logo CSS'/>
                 </div>
                 <div className='stack' >
-                <img src={require('../../images/html.png')} alt='logo HTML'/>
-                </div>
-                <div className='stack' >
-                <img src={require('../../images/react.png')} alt='logo React'/>
-                </div>
-                <div className='stack' >
-                    <img src={require('../../images/javascript.png')} alt='logo JS'/>
+                <img src={html_logo} alt='logo HTML'/>
                 </div>
                 <div className='stack'  >
-                <img src={require('../../images/css.png')} alt='logo CSS'/>
+                <img src={typescript_logo} alt='logo typescript'/>
+                </div>
+                <div className='stack' >
+                <img src={react_logo} alt='logo React'/>
+                </div>
+                <div className='stack' >
+                    <img src={next_logo} alt='logo Nextjs'/>
                 </div>
             </main>
         </InfoSkills>
