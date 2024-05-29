@@ -46,9 +46,7 @@ export default function AnimateTechs(){
 
     return(
         <ResponseCode>
-            <canvas
-                id='canvas_animation'
-            ></canvas>
+            <canvas id='canvas_animation'></canvas>
         </ResponseCode>
     )
 }
