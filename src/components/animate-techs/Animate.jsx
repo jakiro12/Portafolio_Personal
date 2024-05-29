@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { useEffect } from 'react';
 export default function AnimateTechs(){
    
@@ -45,21 +44,9 @@ export default function AnimateTechs(){
     },[])
 
     return(
-        <ResponseCode>
-            <canvas id='canvas_animation'></canvas>
-        </ResponseCode>
+        <div style={{width:"100%",height:"100%",outline:"2px solid black", position:"relative"}}>
+            <canvas id='canvas_animation' style={{position:'absolute'}}></canvas>
+        </div>
     )
 }
 
-const ResponseCode=styled.div`
-    height: 100%;
-    width: 100%;
-    outline: 2px solid black;
-    position: relative;
-    canvas{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-`
