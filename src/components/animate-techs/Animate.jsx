@@ -3,9 +3,17 @@ import { useEffect } from 'react';
 export default function AnimateTechs() {
     useEffect(() => {
         const typescriptImg = new Image();
-        typescriptImg.src = '/TypeScript.png';
         const cssImg = new Image();
+        const javascriptImg=new Image();
+        const htmlImg=new Image();
+        const reactImg=new Image();
+        const nextImg=new Image();
+        typescriptImg.src = '/TypeScript.svg';
         cssImg.src = '/CSS3.svg';
+        javascriptImg.src='/Javascript.svg'
+        htmlImg.src='/HTML5.svg'
+        reactImg.src='/React.svg'
+        nextImg.src='/Next.js.svg'
         const canvasTag = document.querySelector('#canvas_animation');
         const canvas_context = canvasTag.getContext('2d');
         
@@ -24,28 +32,11 @@ export default function AnimateTechs() {
         
         let startAngle = 0;
         const imgSize = 50;
-
-        // Generar una posición aleatoria dentro del canvas
-        function randomPosition() {
-            const x = Math.random() * (canvasTag.width - imgSize) + imgSize / 2;
-            const y = Math.random() * (canvasTag.height - imgSize) + imgSize / 2;
-            return { x, y };
-        }
-
-        function detectCollision(obj1, obj2) {
-            return (
-                obj1.x < obj2.x + imgSize &&
-                obj1.x + imgSize > obj2.x &&
-                obj1.y < obj2.y + imgSize &&
-                obj1.y + imgSize > obj2.y
-            );
-        }
-
-        let typescriptPos = randomPosition();
-        let cssPos = randomPosition();
-
         function animateStacks() {
-            canvas_context.clearRect(0, 0, canvasTag.width, canvasTag.height);
+            canvas_context.clearRect(0, 0, canvasTag.width,canvasTag.height);
+          
+
+
             canvas_context.strokeStyle = '#9b5a01';
             canvas_context.lineWidth = 2;  
             canvas_context.save();  
@@ -68,24 +59,66 @@ export default function AnimateTechs() {
             canvas_context.stroke();
             canvas_context.restore();  
           
+            canvas_context.strokeStyle = '#9b5a01';
+            canvas_context.lineWidth = 2;  
+            canvas_context.save();  
+            canvas_context.translate(centerX * 2 - 160, 0);  
+            canvas_context.rotate(  30 * Math.PI / 180);  
+            canvas_context.beginPath();
+            canvas_context.moveTo(0, 0);
+            canvas_context.lineTo(650, 0);
+            canvas_context.stroke();
+            canvas_context.restore();  
+
+            canvas_context.strokeStyle = '#9b5a01';
+            canvas_context.lineWidth = 2;  
+            canvas_context.save();  
+            canvas_context.translate(centerX * 2 - 160, centerY * 2 );  
+            canvas_context.rotate(- 30 * Math.PI / 180);  
+            canvas_context.beginPath();
+            canvas_context.moveTo(0, 0);
+            canvas_context.lineTo(650, 0);
+            canvas_context.stroke();
+            canvas_context.restore();  
+
+
             canvas_context.save();
-            canvas_context.translate(typescriptPos.x, typescriptPos.y);
-            canvas_context.rotate((Math.sin(startAngle * Math.PI / 240) * angleRotation + 0) * Math.PI / 180);  
+            canvas_context.translate(widthScreen * 0.14, 100);
+            canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+            canvas_context.drawImage(javascriptImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+            canvas_context.restore();
+
+            //1875
+            //0.09375
+            canvas_context.save();
+            canvas_context.translate(widthScreen * 0.28, 100);
+            canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+            canvas_context.drawImage(cssImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+            canvas_context.restore();
+
+            canvas_context.save();
+            canvas_context.translate(widthScreen * 0.42, 100);
+            canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+            canvas_context.drawImage(htmlImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+            canvas_context.restore();
+            
+            canvas_context.save();
+            canvas_context.translate(widthScreen * 0.56, 100);
+            canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
             canvas_context.drawImage(typescriptImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
             canvas_context.restore();
 
             canvas_context.save();
-            canvas_context.translate(cssPos.x, cssPos.y);
-            canvas_context.rotate((Math.sin(startAngle * Math.PI / 240) * angleRotation + 0) * Math.PI / 180);  
-            canvas_context.drawImage(cssImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+            canvas_context.translate(widthScreen * 0.7, 100);
+            canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+            canvas_context.drawImage(reactImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
             canvas_context.restore();
 
-            // Verificar colisiones y ajustar posiciones
-            if (detectCollision(typescriptPos, cssPos)) {
-                typescriptPos = randomPosition();
-                cssPos = randomPosition();
-            }
-
+            canvas_context.save();
+            canvas_context.translate(widthScreen * 0.84, 100);
+            canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+            canvas_context.drawImage(nextImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+            canvas_context.restore();
             startAngle += 1;
             requestAnimationFrame(animateStacks);
         }
@@ -94,7 +127,7 @@ export default function AnimateTechs() {
     }, []);
 
     return (
-        <div style={{ width: "100%", height: "100%", position: "relative",boxShadow: "0px 5px 10px 10px #b4b1b1"  }}>
+        <div style={{ width: "100%", height: "100%", position: "relative",boxShadow: "0px 0px 5px 5px #b4b1b1"  }}>
             <canvas id='canvas_animation' style={{ position: 'absolute' }}></canvas>
         </div>
     );
