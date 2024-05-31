@@ -8,12 +8,12 @@ export default function AnimateTechs() {
         const htmlImg=new Image();
         const reactImg=new Image();
         const nextImg=new Image();
-        typescriptImg.src = '/TypeScript.svg';
-        cssImg.src = '/CSS3.svg';
-        javascriptImg.src='/Javascript.svg'
-        htmlImg.src='/HTML5.svg'
-        reactImg.src='/React.svg'
-        nextImg.src='/Next.js.svg'
+        typescriptImg.src = '/TypeScript.png';
+        cssImg.src = '/CSS3.png';
+        javascriptImg.src='/Javascript.png'
+        htmlImg.src='/HTML5.png'
+        reactImg.src='/React.png'
+        nextImg.src='/Nextjs.png'
         const canvasTag = document.querySelector('#canvas_animation');
         const canvas_context = canvasTag.getContext('2d');
         
@@ -88,8 +88,6 @@ export default function AnimateTechs() {
             canvas_context.drawImage(javascriptImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
             canvas_context.restore();
 
-            //1875
-            //0.09375
             canvas_context.save();
             canvas_context.translate(widthScreen * 0.28, 100);
             canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
@@ -122,8 +120,8 @@ export default function AnimateTechs() {
             startAngle += 1;
             requestAnimationFrame(animateStacks);
         }
-
         animateStacks();
+
     }, []);
 
     return (
