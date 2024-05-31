@@ -2,127 +2,53 @@ import { useEffect } from 'react';
 
 export default function AnimateTechs() {
     useEffect(() => {
-        const typescriptImg = new Image();
-        const cssImg = new Image();
-        const javascriptImg=new Image();
-        const htmlImg=new Image();
-        const reactImg=new Image();
-        const nextImg=new Image();
-        typescriptImg.src = '/TypeScript.png';
-        cssImg.src = '/CSS3.png';
-        javascriptImg.src='/Javascript.png'
-        htmlImg.src='/HTML5.png'
-        reactImg.src='/React.png'
-        nextImg.src='/Nextjs.png'
-        const canvasTag = document.querySelector('#canvas_animation');
-        const canvas_context = canvasTag.getContext('2d');
-        
-        // Obtener el tamaño del canvas y su elemento padre
-        const widthScreen = window.innerWidth;
-        const parentHeight = canvasTag.parentElement.offsetHeight;
+            const reactImg = new Image();
+            reactImg.src = '/React.png';
+            const typescriptImg=new Image();
+            typescriptImg.src='TypeScript.png'
+            const canvasTag = document.querySelector('#canvas_animation');
+            const canvas_context = canvasTag.getContext('2d');
+            // Obtener el tamaño del canvas y su elemento padre
+            const widthScreen = window.innerWidth;
+            const parentHeight = canvasTag.parentElement.offsetHeight;
 
-        // Configurar el tamaño del canvas
-        canvasTag.width = widthScreen;
-        canvasTag.height = parentHeight;
+            // Configurar el tamaño del canvas
+            canvasTag.width = widthScreen;
+            canvasTag.height = parentHeight;
 
-        // Calcular el centro del canvas
-        const centerX = canvasTag.width / 2;
-        const centerY = canvasTag.height / 2;
-        const angleRotation = 6;
+            // Calcular el centro del canvas
+            const centerX = canvasTag.width / 2;
+            const centerY = canvasTag.height / 2;
+            console.log(centerX,centerY)
+            reactImg.onload= function  () {
+               function animateStacks(){
+                canvas_context.clearRect(0, 0, canvasTag.width, canvasTag.height);
+                let imgSize=50
+            canvas_context.save();
+            canvas_context.translate(centerX, centerY);
+            canvas_context.drawImage(reactImg, -imgSize/2, -imgSize/2, imgSize, imgSize);
+            canvas_context.restore();
+
+
+            canvas_context.save();
+            canvas_context.translate(centerX + 80, centerY);
+            canvas_context.drawImage(typescriptImg, -imgSize/2, -imgSize/2, imgSize, imgSize);
+            canvas_context.restore();
+            canvas_context.strokeStyle = '#9b5a01';
+            canvas_context.lineWidth = 2;  
+            canvas_context.save();  
+            canvas_context.translate(0, 80);  
+            canvas_context.rotate(-10 * Math.PI / 180);  
+            canvas_context.beginPath();
+            canvas_context.moveTo(0, 0);
+            canvas_context.lineTo(650, 0);
+            canvas_context.stroke();
+            canvas_context.restore();  
+        };
+        animateStacks()
+    }
+
         
-        let startAngle = 0;
-        const imgSize = 50;
-        nextImg.onload= function () {     
-            function animateStacks() {
-                canvas_context.clearRect(0, 0, canvasTag.width,canvasTag.height);
-              
-    
-    
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(0, centerY * 2 - 80);  
-                canvas_context.rotate(30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-    
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(0, 80);  
-                canvas_context.rotate( - 30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-              
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(centerX * 2 - 160, 0);  
-                canvas_context.rotate(  30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-    
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(centerX * 2 - 160, centerY * 2 );  
-                canvas_context.rotate(- 30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-    
-    
-                canvas_context.save();
-                canvas_context.translate(widthScreen * 0.14, 100);
-                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
-                canvas_context.drawImage(javascriptImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
-                canvas_context.restore();
-    
-                canvas_context.save();
-                canvas_context.translate(widthScreen * 0.28, 100);
-                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
-                canvas_context.drawImage(cssImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
-                canvas_context.restore();
-    
-                canvas_context.save();
-                canvas_context.translate(widthScreen * 0.42, 100);
-                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
-                canvas_context.drawImage(htmlImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
-                canvas_context.restore();
-                
-                canvas_context.save();
-                canvas_context.translate(widthScreen * 0.56, 100);
-                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
-                canvas_context.drawImage(typescriptImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
-                canvas_context.restore();
-    
-                canvas_context.save();
-                canvas_context.translate(widthScreen * 0.7, 100);
-                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
-                canvas_context.drawImage(reactImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
-                canvas_context.restore();
-    
-                canvas_context.save();
-                canvas_context.translate(widthScreen * 0.84, 100);
-                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
-                canvas_context.drawImage(nextImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
-                canvas_context.restore();
-                startAngle += 1;
-                requestAnimationFrame(animateStacks);
-            }
-            animateStacks();
-        }
 
     }, []);
 
