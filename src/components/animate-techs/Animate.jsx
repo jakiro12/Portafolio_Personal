@@ -32,7 +32,7 @@ export default function AnimateTechs() {
         
         let startAngle = 0;
         const imgSize = 50;
-        typescriptImg.onload= function () {     
+        javascriptImg.onload= function () {     
             function animateStacks() {
                 canvas_context.clearRect(0, 0, canvasTag.width,canvasTag.height);
               
