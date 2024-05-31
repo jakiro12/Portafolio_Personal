@@ -97,7 +97,11 @@ export default function AnimateTechs() {
                 canvas_context.drawImage(reactImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
                 canvas_context.restore();
     
-                
+                canvas_context.save();
+                canvas_context.translate(widthScreen * 0.84, 100);
+                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+                canvas_context.drawImage(nextImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+                canvas_context.restore();
                 startAngle += 1;
                 requestAnimationFrame(animateStacks);
             }
