@@ -89,7 +89,7 @@ const moveBtn=keyframes`
 }
     `
 const Container=styled.div`
-    height: 400vh;
+    height: 400dvh;
     font-size: large;
     width: 100%;
     display: grid;
@@ -238,7 +238,7 @@ const Container=styled.div`
     }
     @media screen and (max-width:847px){
         display: grid;
-        height: 300vh;
+        height: 300dvh;
         grid-template-columns: 1fr;
         grid-template-rows: 5% 25% 25% 40% 5%;
         overflow-x:hidden;
