@@ -83,7 +83,23 @@ export default function AnimateTechs() {
                 canvas_context.restore();  
     
     
-               
+                canvas_context.save();
+                canvas_context.translate(widthScreen * 0.14, 100);
+                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+                canvas_context.drawImage(javascriptImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+                canvas_context.restore();
+    
+                canvas_context.save();
+                canvas_context.translate(widthScreen * 0.28, 100);
+                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+                canvas_context.drawImage(cssImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+                canvas_context.restore();
+    
+                canvas_context.save();
+                canvas_context.translate(widthScreen * 0.42, 100);
+                canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
+                canvas_context.drawImage(htmlImg, -imgSize / 2, -imgSize / 2, imgSize, imgSize);
+                canvas_context.restore();
                 
                 canvas_context.save();
                 canvas_context.translate(widthScreen * 0.56, 100);
