@@ -2,15 +2,15 @@ import { useEffect } from 'react';
 
 export default function AnimateTechs() {
     useEffect(() => {
+        const javascriptImg=new Image();
         const typescriptImg = new Image();
         const cssImg = new Image();
-        const javascriptImg=new Image();
         const htmlImg=new Image();
         const reactImg=new Image();
         const nextImg=new Image();
+        javascriptImg.src='/Javascript.png'
         typescriptImg.src = '/TypeScript.png';
         cssImg.src = '/CSS3.png';
-        javascriptImg.src='/Javascript.png'
         htmlImg.src='/HTML5.png'
         reactImg.src='/React.png'
         nextImg.src='/Nextjs.png'
