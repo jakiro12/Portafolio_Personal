@@ -32,56 +32,35 @@ export default function AnimateTechs() {
         
         let startAngle = 0;
         const imgSize = 50;
+        const squareSize = 10;
+
         javascriptImg.onload= function () {     
             function animateStacks() {
                 canvas_context.clearRect(0, 0, canvasTag.width,canvasTag.height);
               
     
-    
                 canvas_context.strokeStyle = '#9b5a01';
                 canvas_context.lineWidth = 2;  
                 canvas_context.save();  
-                canvas_context.translate(0, centerY * 2 - 80);  
-                canvas_context.rotate(30 * Math.PI / 180);  
+                canvas_context.translate(widthScreen * 0.1, centerY + 50);  
+                canvas_context.rotate( 0 * Math.PI / 180);  
                 canvas_context.beginPath();
                 canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-    
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(0, 80);  
-                canvas_context.rotate( - 30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
+                canvas_context.lineTo(widthScreen * 0.8, 0);
                 canvas_context.stroke();
                 canvas_context.restore();  
               
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(centerX * 2 - 160, 0);  
-                canvas_context.rotate(  30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-    
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(centerX * 2 - 160, centerY * 2 );  
-                canvas_context.rotate(- 30 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(650, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-    
+                canvas_context.fillStyle = '#5DC1B9'; // Color 
+                canvas_context.shadowColor = '#5DC1B9';
+                canvas_context.shadowBlur = 5; 
+                canvas_context.shadowOffsetX = 0; 
+                canvas_context.shadowOffsetY = 0; 
+                canvas_context.fillRect(widthScreen * 0.1 - squareSize / 2, centerY - squareSize / 2, squareSize, squareSize);
+              
+                canvas_context.shadowColor = 'transparent';
+                canvas_context.shadowBlur = 0;
+                canvas_context.shadowOffsetX = 0;
+                canvas_context.shadowOffsetY = 0;
     
                 canvas_context.save();
                 canvas_context.translate(widthScreen * 0.14, 100);

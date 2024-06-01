@@ -238,9 +238,9 @@ const Container=styled.div`
     }
     @media screen and (max-width:847px){
         display: grid;
-        height: 300dvh;
+        height: 350dvh;
         grid-template-columns: 1fr;
-        grid-template-rows: 5% 25% 25% 40% 5%;
+        grid-template-rows: 3% 25% 25% 42% 5%;
         overflow-x:hidden;
         .menu_navbar_mobile{
             display: block;

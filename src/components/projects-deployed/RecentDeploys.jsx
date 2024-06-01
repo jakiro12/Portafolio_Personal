@@ -89,7 +89,7 @@ const BoxDeploys=styled.div`
     flex-direction: column;
     .card_description{
         width: min(700px,95%);
-        height: max(20%, 220px);
+        height: max(18%, 220px);
         margin: auto;
         display: flex;
         justify-content: space-between;
