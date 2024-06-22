@@ -33,35 +33,55 @@ export default function AnimateTechs() {
         let startAngle = 0;
         const imgSize = 50;
         const squareSize = 10;
-
+        function drawSquares(context,xPosition,yPosition,size){
+            context.fillRect(xPosition - size, yPosition - size,size,size)
+        }
         javascriptImg.onload= function () {     
             function animateStacks() {
-                canvas_context.clearRect(0, 0, canvasTag.width,canvasTag.height);
+                canvas_context.clearRect(0, 0, canvasTag.width,canvasTag.height); 
               
-    
-                canvas_context.strokeStyle = '#9b5a01';
-                canvas_context.lineWidth = 2;  
-                canvas_context.save();  
-                canvas_context.translate(widthScreen * 0.1, centerY + 50);  
-                canvas_context.rotate( 0 * Math.PI / 180);  
-                canvas_context.beginPath();
-                canvas_context.moveTo(0, 0);
-                canvas_context.lineTo(widthScreen * 0.8, 0);
-                canvas_context.stroke();
-                canvas_context.restore();  
-              
-                canvas_context.fillStyle = '#5DC1B9'; // Color 
-                canvas_context.shadowColor = '#5DC1B9';
-                canvas_context.shadowBlur = 5; 
-                canvas_context.shadowOffsetX = 0; 
-                canvas_context.shadowOffsetY = 0; 
-                canvas_context.fillRect(widthScreen * 0.1 - squareSize / 2, centerY - squareSize / 2, squareSize, squareSize);
-              
-                canvas_context.shadowColor = 'transparent';
-                canvas_context.shadowBlur = 0;
-                canvas_context.shadowOffsetX = 0;
-                canvas_context.shadowOffsetY = 0;
-    
+                canvas_context.fillStyle = '#5DC1B9'; // Color           
+                //j      
+                drawSquares(canvas_context,widthScreen * 0.12, centerY * 2 * 0.75, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.15, centerY * 2 * 0.85, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.18, centerY * 2 * 0.25, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.18, centerY * 2 * 0.5, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.18, centerY * 2 * 0.75, squareSize)
+                //a
+                drawSquares(canvas_context,widthScreen * 0.23, centerY * 2 * 0.85, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.24, centerY * 2 * 0.7, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.25, centerY * 2 * 0.45, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.26, centerY * 2 * 0.25, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.26, centerY * 2 * 0.6, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.27, centerY * 2 * 0.45, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.28, centerY * 2 * 0.7, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.29, centerY * 2 * 0.85, squareSize)
+                //v
+                drawSquares(canvas_context,widthScreen * 0.32, centerY * 2 * 0.25, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.33, centerY * 2 * 0.45, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.34, centerY * 2 * 0.65, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.35, centerY * 2 * 0.85, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.38, centerY * 2 * 0.25, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.37, centerY * 2 * 0.45, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.36, centerY * 2 * 0.65, squareSize)
+                //a
+                drawSquares(canvas_context,widthScreen * 0.41, centerY * 2 * 0.85, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.42, centerY * 2 * 0.7, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.43, centerY * 2 * 0.45, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.44, centerY * 2 * 0.25, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.44, centerY * 2 * 0.6, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.45, centerY * 2 * 0.45, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.46, centerY * 2 * 0.7, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.47, centerY * 2 * 0.85, squareSize)
+                //s
+                drawSquares(canvas_context,widthScreen * 0.50, centerY * 2 * 0.75, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.53, centerY * 2 * 0.85, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.56, centerY * 2 * 0.75, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.52, centerY * 2 * 0.5, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.54, centerY * 2 * 0.6, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.50, centerY * 2 * 0.35, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.53, centerY * 2 * 0.25, squareSize)
+                drawSquares(canvas_context,widthScreen * 0.56, centerY * 2 * 0.35, squareSize)
                 canvas_context.save();
                 canvas_context.translate(widthScreen * 0.14, 100);
                 canvas_context.rotate((Math.sin(startAngle * Math.PI / 180) * angleRotation + 0) * Math.PI / 180);  
