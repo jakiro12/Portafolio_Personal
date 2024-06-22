@@ -1,0 +1,61 @@
+/* styles.css */
+
+.container_box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 1000px; /* Añadimos perspectiva al contenedor para efectos 3D */
+    box-shadow: inset 0px 0px 5px 5px #ffffff;
+    background: #000000;
+}
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(45deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotateX(-30deg) rotateY(405deg); 
+    }
+}
+.cube {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d; /* Preservar el estilo 3D para los hijos */
+    transform: translate(-50%, -50%) rotateX(-30deg) rotateY(45deg); /* Rotación inicial */
+    animation: spin 5s infinite linear; /* Animación de rotación infinita */
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.front_box {
+    transform: translateZ(50px); /* Mover la cara al frente */
+}
+
+.back_box {
+    transform: rotateY(180deg) translateZ(50px); /* Rotar la cara hacia atrás */
+}
+
+.top_box {
+    transform: rotateX(90deg) translateZ(50px); /* Rotar la cara hacia arriba */
+}
+
+.bottom_box {
+    transform: rotateX(-90deg) translateZ(50px); /* Rotar la cara hacia abajo */
+}
+
+.left_box {
+    transform: rotateY(-90deg) translateZ(50px); /* Rotar la cara hacia la izquierda */
+}
+
+.right_box {
+    transform: rotateY(90deg) translateZ(50px); /* Rotar la cara hacia la derecha */
+}
