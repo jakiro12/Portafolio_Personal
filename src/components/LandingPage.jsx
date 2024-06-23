@@ -4,13 +4,15 @@ import TextAbout from './about-me-components/InfoAboutMe';
 import { useEffect, useRef } from 'react';
 import MySkils from './skills-animate-components/Stack';
 import MyLastestDeploys from './projects-deployed/RecentDeploys';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import githublogo from '../images/github.png'
 import linkedin from '../images/linkedIn.png'
 import MobileMenu from './modal-menu/NavbarMenu';
 import AnimateTechs from './animate-techs/Animate';
+export const ContextPage=React.createContext()
 export default function Init(){
     const[showMobileMenu,setShowMobileMenu]=useState(false)
+    const[bgImg,setBgImg]=useState('')
     const test=useRef(null)
     const topPortfolio=useRef(null)
     const deploys=useRef(null)
@@ -39,42 +41,44 @@ export default function Init(){
         getTitleDev.style.transition='all 3s'     
     })
     return(
-        <Container >    
-            {showMobileMenu && <MobileMenu closeMenu={()=>setShowMobileMenu(false)} onScrollStack={()=>scrollWebsite(test)} onScrollProyects={()=>scrollWebsite(deploys)}/>}
-            <nav ref={topPortfolio}>
-                <li onClick={()=>scrollWebsite(test)}>Stack</li>
-                <li onClick={()=>scrollWebsite(deploys)}>Proyectos</li>
-                <div className='box_social_medias'>
-                    <button style={{backgroundSize:'cover'}}
-                    onClick={()=>handleOpenMySocialMedias('https://github.com/jakiro12')}
-                    ></button>
-                    <button style={{backgroundSize:'cover'}}
-                    onClick={()=>handleOpenMySocialMedias('https://www.linkedin.com/in/lautaro-carre%C3%B1o-9b9248b1/')}
-                    ></button>
-                </div>
-                <button className='menu_navbar_mobile' onClick={()=>setShowMobileMenu(true)}><hr/></button>
-            </nav> 
-           <section className='my_description' >
-            <Devname>
-                   <h3 className='my_name'>Soy Lautaro Carreño</h3>
-                   <h3 className='my_job'>Desarrollador Frontend</h3>
-            </Devname>
-            <aside className='more_info'>
-                <TextAbout/>
-                <ImageWeb/>
-            </aside>
-           </section>
-          <section className='proyect_made_it' ref={test}>
-            <MySkils/>
-            <AnimateTechs/>
-          </section>
-          <section className='deploys_made_it' ref={deploys}>
-            <MyLastestDeploys />
-          </section>
-          <footer className='all_about'>
-            <button onClick={()=>scrollWebsite(topPortfolio)} className='scroll_top'>&#8593;</button>
-          </footer>
-        </Container>
+        <ContextPage.Provider value={{bgImg,setBgImg}}>
+            <Container >    
+                {showMobileMenu && <MobileMenu closeMenu={()=>setShowMobileMenu(false)} onScrollStack={()=>scrollWebsite(test)} onScrollProyects={()=>scrollWebsite(deploys)}/>}
+                <nav ref={topPortfolio}>
+                    <li onClick={()=>scrollWebsite(test)}>Stack</li>
+                    <li onClick={()=>scrollWebsite(deploys)}>Proyectos</li>
+                    <div className='box_social_medias'>
+                        <button style={{backgroundSize:'cover'}}
+                        onClick={()=>handleOpenMySocialMedias('https://github.com/jakiro12')}
+                        ></button>
+                        <button style={{backgroundSize:'cover'}}
+                        onClick={()=>handleOpenMySocialMedias('https://www.linkedin.com/in/lautaro-carre%C3%B1o-9b9248b1/')}
+                        ></button>
+                    </div>
+                    <button className='menu_navbar_mobile' onClick={()=>setShowMobileMenu(true)}><hr/></button>
+                </nav> 
+            <section className='my_description' >
+                <Devname>
+                    <h3 className='my_name'>Soy Lautaro Carreño</h3>
+                    <h3 className='my_job'>Desarrollador Frontend</h3>
+                </Devname>
+                <aside className='more_info'>
+                    <TextAbout/>
+                    <ImageWeb/>
+                </aside>
+            </section>
+            <section className='proyect_made_it' ref={test}>
+                <MySkils/>
+                <AnimateTechs/>
+            </section>
+            <section className='deploys_made_it' ref={deploys}>
+                <MyLastestDeploys />
+            </section>
+            <footer className='all_about'>
+                <button onClick={()=>scrollWebsite(topPortfolio)} className='scroll_top'>&#8593;</button>
+            </footer>
+            </Container> 
+        </ContextPage.Provider>
     )
 }
 const moveBtn=keyframes`

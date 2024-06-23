@@ -5,10 +5,10 @@ import javascript_logo from '../../images/JavaScript.svg'
 import css_logo from '../../images/CSS3.svg'
 import typescript_logo from '../../images/TypeScript.svg'
 import next_logo from '../../images/Next.js.svg'
-
-
+import { useContext} from 'react';
+import { ContextPage } from '../LandingPage';
 export default function MySkils(){
-    
+    const{setBgImg}=useContext(ContextPage)
     return(
         <InfoSkills>
             <header>
@@ -17,22 +17,33 @@ export default function MySkils(){
                 </p>
             </header>
             <main>
-                <div className='stack' >
+                <div className='stack'             
+                    onClick={()=>setBgImg('./JavaScript.png')} >
                     <img src={javascript_logo} alt='logo JS'/>
                 </div>
-                <div className='stack'  >
+                <div className='stack'
+                    onClick={()=>setBgImg('./CSS3.png')} 
+                     >
                 <img src={css_logo} alt='logo CSS'/>
                 </div>
-                <div className='stack' >
+                <div className='stack'
+                    onClick={()=>setBgImg('./HTML5.png')} 
+                     >
                 <img src={html_logo} alt='logo HTML'/>
                 </div>
-                <div className='stack'  >
+                <div className='stack' 
+                    onClick={()=>setBgImg('./TypeScript.png')} 
+                     >
                 <img src={typescript_logo} alt='logo typescript'/>
                 </div>
-                <div className='stack' >
+                <div className='stack'
+                    onClick={()=>setBgImg('./React.png')} 
+                    >
                 <img src={react_logo} alt='logo React'/>
                 </div>
-                <div className='stack' >
+                <div className='stack'
+                        onClick={()=>setBgImg('./Nextjs.png')} 
+                         >
                     <img src={next_logo} alt='logo Nextjs'/>
                 </div>
             </main>
@@ -60,10 +71,7 @@ const InfoSkills=styled.article`
             height: 100px;
             margin: auto;
             border-radius: 10px;
-            position: relative;
-            perspective: 700px;
-            perspective-origin: top;
-            transition: all 2s;
+            cursor: pointer;
             img{
                 border-radius: 10px;
                 width: 100%;
