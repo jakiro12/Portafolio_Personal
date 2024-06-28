@@ -43,10 +43,26 @@ export default function AnimateTechs() {
         drawHorizontalLine(0,parentHeight * 0.75); 
         drawHorizontalLine(0,parentHeight * 0.85);
         // vertical lines or circles?
-        drawVerticalLine(widthScreen * 0.05,0)
-        drawVerticalLine(widthScreen * 0.475,0)
+        drawVerticalLine(widthScreen * 0.1,0)
+        drawVerticalLine(widthScreen * 0.2,0)
+        drawVerticalLine(widthScreen * 0.25,0)
+        drawVerticalLine(widthScreen * 0.3,0)
+        drawVerticalLine(widthScreen * 0.35,0)
+        drawVerticalLine(widthScreen * 0.4,0)
+        drawVerticalLine(widthScreen * 0.435,0)
+        drawVerticalLine(widthScreen * 0.465,0)
+        drawVerticalLine(widthScreen * 0.485,0)
         drawVerticalLine(widthScreen * 0.5,0)
-        drawVerticalLine(widthScreen * 0.525,0)
+        drawVerticalLine(widthScreen * 0.515,0)
+        drawVerticalLine(widthScreen * 0.535,0)
+        drawVerticalLine(widthScreen * 0.565,0)
+        drawVerticalLine(widthScreen * 0.6,0)
+        drawVerticalLine(widthScreen * 0.65,0)
+        drawVerticalLine(widthScreen * 0.7,0)
+        drawVerticalLine(widthScreen * 0.75,0)
+        drawVerticalLine(widthScreen * 0.8,0)
+        drawVerticalLine(widthScreen * 0.9,0)
+
 
     }, []);
 
