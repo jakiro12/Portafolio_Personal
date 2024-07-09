@@ -19,15 +19,16 @@ const Container=styled.div`
     margin-inline: auto;
     font-size: large;
     padding: 5px;
-    box-shadow: 7px 7px rgba(77, 65, 65, 0.3);
-    border-inline-start: 5px solid;
-    border-block-start: 5px solid;
-    border-image-slice: 1;
-    border-image-source: radial-gradient(circle at top left, #50bc34 , transparent 60%);
+    box-shadow: 7px 7px rgba(77, 65, 65, 0.3);    
     border-radius: 10px;
     overflow: hidden;
         p{
             font-size: 19px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        p::first-letter{
+            font-weight: bolder;
         }
     @media screen and (max-width:847px) {
         margin-inline: auto;

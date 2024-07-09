@@ -22,7 +22,9 @@ export default function MyLastestDeploys(){
                         <button style={{backgroundSize:'cover'}}
                             onClick={()=>handleOpenLinkCard('https://mockup-greenplus.vercel.app/')}
                         ></button>
-                        <button style={{backgroundSize:'cover'}}></button>
+                        <button style={{backgroundSize:'cover'}}
+                             onClick={()=>handleOpenLinkCard('https://github.com/jakiro12/wedding_invitation')}
+                             ></button>
                     </div>
                 </div>
             </div>

@@ -48,10 +48,10 @@ export default function Init(){
                     <li onClick={()=>scrollWebsite(test)}>Stack</li>
                     <li onClick={()=>scrollWebsite(deploys)}>Proyectos</li>
                     <div className='box_social_medias'>
-                        <button style={{backgroundSize:'cover'}}
+                        <button type='button' style={{backgroundSize:'cover'}}
                         onClick={()=>handleOpenMySocialMedias('https://github.com/jakiro12')}
                         ></button>
-                        <button style={{backgroundSize:'cover'}}
+                        <button type='button' style={{backgroundSize:'cover'}}
                         onClick={()=>handleOpenMySocialMedias('https://www.linkedin.com/in/lautaro-carre%C3%B1o-9b9248b1/')}
                         ></button>
                     </div>

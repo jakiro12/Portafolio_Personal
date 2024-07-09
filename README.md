@@ -5,3 +5,5 @@
 ### Tecnologias utilizadas
 -ReactJs
 -Styled Components
+-ContextApi
+-Canvas HTML5
