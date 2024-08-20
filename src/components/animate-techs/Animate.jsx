@@ -2,17 +2,15 @@ import { useEffect,useContext } from 'react';
 import { ContextPage } from '../LandingPage';
 import './styles.css'
 export default function AnimateTechs() {
-    const {bgImg}=useContext(ContextPage)
+    const {bgImg}=useContext(ContextPage) //Obteniene el valor dentro del contexto
     
     useEffect(() => {
         const canvasTag = document.querySelector('#canvas_animation');
         const canvas_context = canvasTag.getContext('2d');
        
-        // Obtener el tamaño del canvas y su elemento padre
         const widthScreen = window.innerWidth;
         const parentHeight = canvasTag.parentElement.offsetHeight;
 
-        // Configurar el tamaño del canvas
         canvasTag.width = widthScreen;
         canvasTag.height = parentHeight;
         function drawHorizontalLine(xPosition,yPos) {
