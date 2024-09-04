@@ -10,9 +10,27 @@ export default function MyLastestDeploys(){
     return(
         <BoxDeploys>
             <div className="card_description" >
-              <section className='img_container'>
+            <aside className='img_container'   >
+                <img className='img_deploy' src={require(`../../images/init2.jpg`)} alt="app skatepark" />
+                </aside>
+                <div className='about_this_deploy'>
+                    <p className='first_d'>
+                        Aplicacion web para asignar tareas a un tablero personal de trello usando credenciales personales sin necesidad de iniciar sesion
+                    </p>
+                    <div className='box_social_medias_deploy'>
+                        <button 
+                            onClick={()=>handleOpenLinkCard('https://trello-list-maker.vercel.app/')}                        
+                        style={{backgroundSize:'cover'}}></button>
+                        <button 
+                            onClick={()=>handleOpenLinkCard('https://github.com/jakiro12/trello_list_maker')}                                                
+                        style={{backgroundSize:'cover'}}></button>
+                    </div>
+                </div>                
+            </div>
+            <div className="card_description" >
+              <aside className='img_container'>
                 <img className='img_deploy' src={require('../../images/invitacion.jpg')} alt="img logo" />
-              </section>
+              </aside>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
                     Invitación animada para las bodas, se pueden elegir entre ubicaciones la iglesia o el lugar de la ceremonia civil.
@@ -29,9 +47,9 @@ export default function MyLastestDeploys(){
                 </div>
             </div>
           <div className="card_description" >
-            <section className='img_container'>
+            <aside className='img_container'>
                 <img className='img_deploy' src={require(`../../images/phaser_game1.jpg`)} alt="img logo" />
-                </section>
+                </aside>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
                     Juego para aprender la teoria de colores. Debes agregar un color a las esferas y elegir las que coincidan con el color solicitado que se muestra en la esquina superior izquierda de la pantalla, para avanzar de nivel y completar la rueda cromatica de colores.
@@ -47,9 +65,9 @@ export default function MyLastestDeploys(){
                 </div>
             </div>
             <div className="card_description" >
-            <section className='img_container'>
+            <aside className='img_container'>
                     <img className='img_deploy' src={require(`../../images/dovereapp1.png`)} alt="img logo" />
-                </section>
+                </aside>
                 <div className='about_this_deploy'>
                     <p className='first_d'>
                        Aplicacion movil realizada en React Native para obtener puntos a traves de un codigo
@@ -62,22 +80,7 @@ export default function MyLastestDeploys(){
                         ></button>
                     </div>
                 </div>
-            </div>
-            <div className="card_description" >
-            <section className='img_container'   >
-                <img className='img_deploy' src={require(`../../images/skatepark1.png`)} alt="app skatepark" />
-                </section>
-                <div className='about_this_deploy'>
-                    <p className='first_d'>
-                    Aplicacion Movil creada en React-Native para localizar todos los skateparks del pais.
-                    </p>
-                    <div className='box_social_medias_deploy'>
-                        <button style={{backgroundSize:'cover'}}></button>
-                        <button style={{backgroundSize:'cover'}}></button>
-                    </div>
-                </div>
-                
-            </div>
+            </div>            
             </BoxDeploys>
     )
 }
